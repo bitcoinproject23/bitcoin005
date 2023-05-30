@@ -1,0 +1,1908 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;display=swap");
+@import url("bootstrap.min.css");
+@import url("bootstrap-table.min.css");
+@import url("perfect-scrollbar.css");
+@import url("slick.css");
+@import url("slick-theme.css");
+@import url("apexcharts.css");
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: none !important;
+}
+
+button:focus {
+    outline: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.sm-gutters {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sm-gutters .sm-gutters {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sm-gutters > .col,
+.sm-gutters > [class*='col-'] {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.form-control::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #6e738e;
+}
+
+.form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #6e738e;
+}
+
+.form-control:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #6e738e;
+}
+
+.form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: #6e738e;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none;
+}
+
+.green {
+    color: #05c46b !important;
+}
+
+.red {
+    color: #ff3f34 !important;
+}
+
+.red svg path {
+    fill: #ff3f34 !important;
+}
+
+.dropdown-toggle::after {
+    background: url(../img/svg-icon/down-angle.svg) no-repeat;
+    border: none;
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    margin: 0;
+    background-size: 12px;
+}
+
+.dropdown-menu {
+    background: #2e2a4d;
+    border-radius: 0;
+    margin: 10px 0;
+    padding: 12px 0;
+}
+
+.dropdown-menu a {
+    color: #ffffff;
+    padding: 12px 25px;
+}
+
+.dropdown-menu a svg {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-menu a:hover {
+    background: #242041;
+    color: #ffffff;
+}
+
+.dropdown-menu a:focus {
+    background: #242041;
+    outline: none;
+    color: #ffffff;
+}
+
+.slick-slide:focus {
+    outline: none;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+.apexcharts-text tspan {
+    fill: #6f748f;
+}
+
+.apexcharts-legend-series span {
+    color: #6f748f !important;
+    margin-left: 5px;
+    border-radius: 50px !important;
+    margin-bottom: 5px;
+}
+
+.apexcharts-xaxis line {
+    stroke: #6f748f;
+}
+
+.apexcharts-gridline {
+    stroke: #2e2a4d;
+}
+
+.btn-green,
+.btn-red {
+    background: #05c46b !important;
+    width: 100%;
+    border: 1px solid #05c46b !important;
+    margin-top: 0 !important;
+}
+
+.btn-red {
+    background: #ff3f34 !important;
+    border-color: #ff3f34 !important;
+}
+
+.btn-green:hover,
+.btn-red:hover {
+    background: transparent;
+    color: #ffffff !important;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000000;
+    background: #1a1736;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.header {
+    background: #242041;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.header__user-balance-text h2 span {
+    margin-left: 10px;
+}
+
+.header__user-balance {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #2e2a4d;
+    padding: 8px 30px;
+    border-radius: 5px;
+}
+
+.header__user-balance-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.header__user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.header__user-balance-text h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.header__user-balance-text span svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+}
+
+.header__user-balance-text span {
+    font-size: 14px;
+}
+
+.header__user-profile {
+    display: flex;
+    align-items: center;
+    background: #2e2a4d;
+    padding: 6px 25px 6px 10px;
+    border-radius: 5px;
+    gap: 25px;
+    cursor: pointer;
+}
+
+.header__user-profile-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.header__user-profile-text h2 {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.header__user-profile-icon {
+    position: relative;
+}
+
+.header__user-profile-icon span {
+    background: #ff3f34;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    top: -3px;
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 17px;
+    font-size: 11px;
+    text-align: center;
+    border: 2px solid #1a1736;
+}
+
+.header__user-profile-text span {
+    color: #05c46b;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.header__user-profile-text span svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.dropdown-menu a svg path,
+.dropdown-menu a svg circle {
+    fill: #bbb5d1;
+}
+
+.header__price-update ul li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    display: inline-block;
+    background: #2e2a4d;
+    padding: 8px 30px;
+    border-radius: 5px;
+    margin-right: 17px;
+}
+
+.header__price-update ul li:last-child {
+    margin-right: 0;
+}
+
+.header__price-update ul li span {
+    display: block;
+    color: #6f748f;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.header__sidebar-icon {
+    display: none;
+}
+
+.header__sidebar-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+#themeChange .sun-icon {
+    display: none;
+}
+
+.exchange {
+    padding-left: 80px;
+    transition: 0.3s;
+}
+
+#trading-chart-light {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+}
+
+.navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s;
+    width: 80px;
+    height: 100vh;
+    z-index: 999;
+    background-color: #242041;
+    padding: 30px 14px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: grid;
+}
+
+.navigation:hover {
+    width: 250px;
+}
+
+.navigation__item-link,
+.navigation-header-link,
+.navigation-footer-link {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.navigation__item-icon-wrapper,
+.navigation__header-icon-wrapper,
+.navigation__footer-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+}
+
+.navigation__item {
+    margin: 35px 0;
+}
+
+.navigation__item-icon,
+.navigation__footer-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.navigation__item-icon path,
+.navigation__footer-icon path {
+    fill: #bbb5d1;
+    transition: 0.3s;
+}
+
+.navigation__item-link.active .navigation__item-label,
+.navigation-footer-link.active .navigation__footer-label,
+.navigation__item-link:hover .navigation__item-label,
+.navigation-footer-link:hover .navigation__footer-label {
+    color: #178cff;
+}
+
+.navigation__item-link.active .navigation__item-icon path,
+.navigation-footer-link.active .navigation__footer-icon path,
+.navigation__item-link:hover .navigation__item-icon path,
+.navigation-footer-link:hover .navigation__footer-icon path {
+    fill: #178cff;
+}
+
+.navigation__item-label,
+.navigation__header-label,
+.navigation__footer-label {
+    min-width: 150px;
+    margin-left: 15px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.navigation__header-label {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.navigation__header-icon {
+    width: 44px;
+    height: 44px;
+}
+
+.navigation__list {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__footer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.exchange__widget,
+.exchange__widget__trading {
+    background: #242041;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.exchange__widget table,
+.exchange__widget table tr {
+    width: 100%;
+    border-radius: 50px;
+    table-layout: fixed;
+}
+
+.exchange__widget-title {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.exchange__widget tr th,
+.exchange__widget tr td {
+    border: none;
+}
+
+.exchange__widget td,
+.exchange__widget th {
+    color: #6f748f;
+}
+
+.exchange__widget table tr:nth-child(even) {
+    background: #1a1736;
+}
+
+.exchange__widget table tr td:first-child {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.exchange__widget table tr td:first-child svg {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.exchange__widget table {
+    margin: 0;
+}
+
+.exchange__widget table tr:last-child {
+    border-bottom: none;
+}
+
+.exchange__widget table thead th {
+    padding-bottom: 10px;
+}
+
+.exchange__widget .nav-pills {
+    background: #2e2a4d;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin: 0 0 15px;
+}
+
+.exchange__widget .nav-pills .nav-item a {
+    color: #ffffff;
+    border-radius: 0;
+    padding: 10px 0px;
+}
+
+.exchange__widget .nav-pills .nav-item:last-child a {
+    margin-right: 0;
+}
+
+.exchange__widget table tbody tr:hover {
+    background: #2e2a4d;
+    cursor: pointer;
+}
+
+.exchange__widget .nav-pills .nav-item {
+    padding: 0px 15px;
+}
+
+.exchange__widget .nav-pills .nav-item a.active {
+    color: #178cff;
+    background: transparent;
+}
+
+.exchange__widget tr td.red svg,
+.exchange__widget tr td.green svg {
+    margin-right: 5px;
+}
+
+.exchange__widget tr td.red svg path {
+    fill: #ff3f34;
+}
+
+.exchange__widget tr td.green svg path {
+    fill: #05c46b;
+}
+
+.exchange__widget table tr {
+    float: left;
+    clear: both;
+    overflow: hidden;
+}
+
+.exchange__widget table tr th,
+.exchange__widget table tr td {
+    width: 200px;
+    vertical-align: middle;
+    padding: 10px 14px;
+}
+
+.exchange__widget table tbody {
+    height: 390px;
+    display: block;
+    overflow-y: auto;
+    position: relative;
+}
+
+.exchange__widget table thead th:first-child,
+.exchange__widget table tbody td:first-child {
+    width: 44%;
+}
+
+.exchange__widget__table td a {
+    border: 1px solid #1790ff4d;
+    padding: 2px 12px;
+    background: #1790ff4d;
+    color: #178cff;
+    border-radius: 5px;
+}
+
+.exchange__widget__table td a:hover {
+    background: #178cff;
+    color: #ffffff;
+}
+
+.exchange__widget-slider-item-content h2 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.exchange__widget-slider-item-content p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.exchange__widget-slider-item {
+    margin: 0 10px;
+    margin-bottom: -30px;
+    background: #2e2a4d;
+}
+
+.exchange__widget-slider-item-chart {
+    margin: 0 -15px;
+}
+
+.exchange__widget-slider-item-content {
+    padding: 16px 20px;
+    position: relative;
+}
+
+.exchange__widget-slider-item-content span {
+    position: absolute;
+    top: 23px;
+    background: #05c46b;
+    right: 0;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 5px 10px;
+    color: #ffffff;
+}
+
+.exchange__widget select {
+    background: transparent;
+    border-color: #6f748f42;
+    height: 52px;
+    color: #bbb5d1;
+}
+
+.exchange__widget select option {
+    color: #000000;
+}
+
+.exchange__widget select:focus {
+    box-shadow: none;
+    border-color: #bbb5d1;
+}
+
+.exchange__widget label {
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.exchange__widget input,
+.exchange__widget textarea {
+    background: transparent;
+    border-color: #6f748f42;
+    padding: 25px;
+    color: #ffffff !important;
+}
+
+.exchange__widget input:focus,
+.exchange__widget textarea:focus {
+    background: transparent;
+    border-color: #bbb5d1;
+}
+
+.custom-control.custom-switch .custom-control-label {
+    margin-top: 0;
+}
+
+.exchange__widget button {
+    border: 1px solid #178cff;
+    padding: 10px 30px;
+    background: #178cff;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 37px;
+    transition: 0.3s;
+}
+
+.exchange__widget button:hover {
+    background: transparent;
+    color: #178cff;
+}
+
+.exchange__widget_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 140px);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.exchange-email-verify {
+    text-align: center;
+    color: #ffffff;
+    padding: 50px;
+}
+
+.exchange-email-input input {
+    display: inline-block;
+    max-width: 70px;
+    border-radius: 5px;
+    border: 1px solid #6f748f42;
+    margin: 50px 5px 20px;
+    font-size: 30px;
+}
+
+.exchange-email-verify button {
+    display: block;
+    width: 100%;
+}
+
+.exchange-email-verify p {
+    color: #bbb5d1;
+    margin-top: 5px;
+}
+
+.exchange-email-verify span {
+    margin-top: 20px;
+    display: block;
+    color: #bbb5d1;
+}
+
+.exchange-email-verify .google-button {
+    border: 1px solid #6f748f42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 5px;
+    color: #000000;
+    margin: 50px 0;
+    font-weight: 600;
+}
+
+.exchange-email-verify .google-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.exchange-email-verify h6 {
+    color: #bbb5d1;
+    font-weight: 400;
+    font-size: 14px;
+    position: relative;
+}
+
+.exchange-email-verify h6:before,
+.exchange-email-verify h6:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 110px;
+    height: 1px;
+    background: #6f748f42;
+    transform: translateY(-50%);
+}
+
+.exchange-email-verify h6:after {
+    left: unset;
+    right: 0;
+}
+
+.exchange-email-radio .custom-radio {
+    border: 1px solid #6f748f42;
+    padding: 20px 50px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background: #2e2a4d;
+}
+
+.exchange-email-radio label {
+    margin: 0;
+}
+
+.exchange-email-radio {
+    margin-top: 35px;
+}
+
+.exchange__widget__order-note h2 {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.exchange__widget__order-note h2 svg {
+    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+}
+
+.exchange__widget__order-note-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-column-gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.exchange__widget__order {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    margin: 41px 0 0;
+}
+
+.exchange__widget__order-note-item input,
+.exchange__widget__order-note-item button {
+    background: #1a1736;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 14px 25px;
+    height: unset;
+}
+
+.exchange__widget__order-note-item button {
+    background: transparent;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.exchange__widget__order-note-item button:after {
+    margin-left: 12px;
+    background-size: 10px;
+    width: 10px;
+    height: 10px;
+}
+
+.exchange__widget__order-note-item input:focus {
+    background: #1a1736;
+    color: #ffffff;
+}
+
+.exchange__widget__order-note-item button:hover {
+    color: #ffffff;
+}
+
+.exchange__widget__order-note-item button:focus {
+    box-shadow: none;
+}
+
+.exchange__widget__order-note-item p {
+    color: #ffffff;
+}
+
+.exchange__widget__order-note-item .dropdown-menu {
+    min-width: unset;
+    height: 250px;
+    overflow: auto;
+    text-transform: uppercase;
+}
+
+.exchange__widget__order-status.exchange__widget table thead th:first-child,
+.exchange__widget__order-status.exchange__widget table tbody td:first-child,
+.exchange__widget__purchase .exchange__widget table thead th:first-child,
+.exchange__widget__purchase .exchange__widget table tbody td:first-child {
+    width: 30%;
+}
+
+.exchange__widget__order-buy-coin button {
+    margin-top: 0;
+}
+
+.exchange__wallet-account {
+    color: #ffffff;
+}
+
+.exchange__widget-account-info h3 {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.exchange__widget-account-info h2 {
+    font-size: 48px;
+}
+
+.exchange__widget-account-info {
+    background: #2e2a4d;
+    border-radius: 5px;
+    padding: 20px 20px 10px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.exchange__wallet-card-item {
+    background: #2e2a4d;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    color: #ffffff;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, #f83600d1 0%, #f9d423d1 100%);
+}
+
+.exchange__wallet-card-item:nth-child(2) {
+    background-image: linear-gradient(to right, #001fffd1 0%, #46eeffd1 100%);
+}
+
+.exchange__wallet-card-item:nth-child(3) {
+    background-image: linear-gradient(to right, #20d200d1 0%, #88ffadd1 100%);
+}
+
+.exchange__wallet-card-item:last-child {
+    margin-bottom: 0;
+}
+
+.exchange__wallet-card-item span {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+.exchange__wallet-card-item h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.exchange__wallet-card-item h3 {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.exchange__wallet-card-item p {
+    margin-bottom: 40px;
+}
+
+.exchange__wallet-card-item a {
+    margin-right: 15px;
+    color: #ffffff;
+}
+
+.exchange__wallet-card-item a svg {
+    margin-right: 5px;
+}
+
+.exchange__wallet-card-item a svg rect,
+.exchange__widget-card-add button svg rect {
+    fill: #ffffff47;
+    fill-opacity: 1;
+}
+
+.exchange__wallet-card-item a svg path,
+.exchange__widget-card-add button svg path {
+    fill: #ffffff;
+}
+
+#walletVolume .apexcharts-canvas {
+    margin: auto;
+}
+
+.exchange__widget-card-add button {
+    border: 1px solid #178cff;
+    padding: 10px 20px;
+    background: #178cff;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 37px;
+    transition: 0.3s;
+}
+
+.exchange__widget-card-add button:hover {
+    background: transparent;
+    color: #178cff;
+}
+
+.exchange__widget-card-add button svg {
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    transition: 0.3s;
+}
+
+.exchange__widget-card-add button:hover svg path {
+    fill: #178cff;
+}
+
+.exchange__widget__history {
+    background: #242041;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.exchange__widget__history button#remove,
+.exchange__widget__history button#remove:hover,
+.exchange__widget__history button#remove:focus {
+    background: #ff3f34;
+    box-shadow: none;
+    outline: none;
+    display: flex;
+}
+
+.exchange__widget__history .remove i {
+    color: #ff3f34;
+}
+
+.exchange__widget__history .dropdown-item:focus,
+.exchange__widget__history .dropdown-item:hover {
+    background: #242041;
+}
+
+.exchange__widget__history .dropdown-divider {
+    border-top: 1px solid #6f748f;
+}
+
+.exchange__widget__history .dropdown-toggle::after {
+    display: none;
+}
+
+.exchange__widget__history thead {
+    background: #2e2a4d;
+}
+
+.bootstrap-table .fixed-table-container .fixed-table-body {
+    height: 600px;
+    display: block;
+    overflow-y: auto;
+}
+
+.fixed-table-body::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 6px;
+}
+
+.fixed-table-body:hover::-webkit-scrollbar {
+    display: block;
+}
+
+.fixed-table-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.fixed-table-body::-webkit-scrollbar-thumb {
+    background: #6f748f42;
+}
+
+.bootstrap-table .fixed-table-container.fixed-height .table thead th {
+    border-bottom: 1px solid #6f748f42;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border: 1px solid #6f748f42;
+    color: #ffffff;
+}
+
+.exchange__widget__history select {
+    background: #2e2a4d;
+    border-color: #2e2a4d;
+    padding: 0 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: unset;
+}
+
+.exchange__widget__history select:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.fixed-table-toolbar {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.fixed-table-toolbar .bs-bars button {
+    margin-right: 20px;
+}
+
+.fixed-table-toolbar .search input {
+    background: #2e2a4d;
+    border-color: #2e2a4d;
+    margin-right: 15px;
+    color: #ffffff;
+}
+
+.exchange__widget__history .bootstrap-table {
+    margin-top: 30px;
+}
+
+.bootstrap-table .fixed-table-container.fixed-height .fixed-table-border {
+    border: none;
+}
+
+.fixed-table-toolbar .columns button {
+    background: #2e2a4d;
+    border-color: #2e2a4d;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed-table-toolbar .fa {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.fixed-table-toolbar .columns button:focus,
+.fixed-table-toolbar .columns button:active {
+    outline: none;
+    box-shadow: none !important;
+}
+
+.bootstrap-table .fixed-table-toolbar .columns label span {
+    margin-left: 10px;
+}
+
+.bootstrap-table .fixed-table-toolbar .columns label {
+    color: #ffffff;
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.pagination-detail {
+    color: #ffffff;
+    margin-bottom: 0 !important;
+}
+
+.pagination-detail span button {
+    display: inline-block;
+    margin-right: 5px;
+    background: #2e2a4d;
+    border-color: #2e2a4d;
+}
+
+ul.pagination li a {
+    background: #2e2a4d;
+    color: #ffffff;
+    border-color: #2e2a4d;
+}
+
+ul.pagination li.page-last-separator a {
+    background: #2e2a4d !important;
+    border-color: #2e2a4d !important;
+}
+
+ul.pagination li a:hover {
+    background: #178cff;
+    border-color: #178cff;
+    color: #ffffff;
+}
+
+.pagination-detail span button:hover,
+.pagination-detail span button:focus,
+.pagination-detail span button:active,
+.fixed-table-toolbar .columns button:hover,
+.fixed-table-toolbar .columns button:focus {
+    background: #178cff !important;
+    border-color: #178cff !important;
+    box-shadow: none !important;
+}
+
+.exchange__widget__history table tr td img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.exchange__widget__history table tr td {
+    text-transform: uppercase;
+}
+
+.fixed-table-footer {
+    margin-right: 0 !important;
+}
+
+.fixed-table-toolbar #remove svg path {
+    fill: #ffffff;
+}
+
+.fixed-table-toolbar #remove svg {
+    margin-right: 5px;
+}
+
+i.fa.fa-download {
+    background: url("../img/svg-icon/download.svg") no-repeat center center/cover;
+}
+
+i.fa.fa-th-list {
+    background: url("../img/svg-icon/stack.svg") no-repeat center center/cover;
+}
+
+i.fa.fa-sync {
+    background: url("../img/svg-icon/loading.svg") no-repeat center center/cover;
+}
+
+i.fa.fa-plus {
+    background: url("../img/svg-icon/plus-solid.svg") no-repeat center center/cover;
+}
+
+i.fa.fa-minus {
+    background: url("../img/svg-icon/minus.svg") no-repeat center center/cover;
+}
+
+i.fa.fa-caret-square-down {
+    background: url("../img/svg-icon/updown.svg") no-repeat center center/cover;
+}
+
+.fa-download:before,
+.fa-th-list:before,
+.fa-sync:before,
+.fa-plus:before,
+.fa-minus:before,
+.fa-caret-square-down:before {
+    visibility: hidden;
+}
+
+.exchange__widget__profile label {
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.exchange__widget__profile-avatar svg {
+    width: 108px;
+    height: 108px;
+    border-radius: 100px;
+    background: #ffffff;
+    padding: 4px;
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
+.exchange__widget__profile-avatar span svg {
+    width: 25px;
+    height: 25px;
+    background: #178cff;
+    border-radius: 50px;
+    padding: 7px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.exchange__widget__profile-avatar {
+    position: relative;
+    max-width: 111px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.exchange__widget__profile select {
+    background: transparent;
+    border-color: #6f748f42;
+    height: 52px;
+    color: #bbb5d1;
+}
+
+.exchange__widget__profile select option {
+    color: #000000;
+}
+
+.exchange__widget__profile select:focus {
+    box-shadow: none;
+    border-color: #bbb5d1;
+}
+
+.settings-notification li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #6f748f42;
+    align-items: center;
+}
+
+.settings-notification li span {
+    color: #6f748f;
+}
+
+.settings-notification li:last-child {
+    border-bottom: 0;
+}
+
+.notification-info p {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.settings-api-key label {
+    color: #ffffff;
+}
+
+.settings-api-key input {
+    background: transparent;
+    border-color: #6f748f42;
+    padding: 25px;
+}
+
+.settings-api-key input:focus {
+    background: transparent;
+    border-color: #bbb5d1;
+}
+
+.exchange__settings-api-list table td {
+    font-size: 13px;
+    padding: 10px 18px;
+}
+
+.exchange__settings-api-list table tbody {
+    height: unset;
+}
+
+.exchange__settings-api-list table thead th:first-child,
+.exchange__settings-api-list table tbody td:first-child,
+.exchange__settings-api-list table tr th,
+.exchange__settings-api-list table tr td {
+    width: unset;
+}
+
+.exchange__settings-api-list table tr {
+    float: unset;
+}
+
+.exchange__settings-api-list table,
+.exchange__settings-api-list table tr {
+    table-layout: fixed;
+}
+
+.exchange__settings-api-list table tbody {
+    display: contents;
+}
+
+.exchange-verification-item {
+    border: 1px solid #6f748f42;
+    text-align: center;
+    padding: 30px 30px 50px;
+    border-radius: 5px;
+}
+
+.custom-file .custom-file-label {
+    background: transparent;
+    border-color: #6f748f42;
+    color: #6f748f;
+}
+
+.custom-file .custom-file-label::after {
+    background: #178cff;
+    color: #ffffff;
+}
+
+.exchange-verification button {
+    background: #178cff;
+    border: 1px solid #178cff;
+    padding: 12px 40px;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 28px;
+}
+
+.exchange-verification button:hover {
+    background: transparent;
+    color: #178cff;
+}
+
+@media only screen and (max-width: 1200px) {
+    #walletVolume .apexcharts-canvas {
+        margin-top: 30px;
+    }
+    .header__price-update {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .fixed-table-toolbar {
+        position: unset;
+    }
+    .exchange__widget__history .bootstrap-table {
+        margin-top: 10px;
+    }
+    .bootstrap-table .fixed-table-toolbar .bs-bars {
+        position: absolute;
+        top: 10px;
+        left: 150px;
+    }
+    .columns.columns-right.btn-group.float-right {
+        position: absolute;
+        top: 10px;
+        left: 260px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header__sidebar-icon {
+        display: block;
+        cursor: pointer;
+    }
+    .mobile-nav {
+        overflow: hidden;
+    }
+    .mobile-nav .navigation {
+        opacity: 1;
+        visibility: visible;
+        width: 250px;
+    }
+    .mobile-nav .exchange {
+        padding-left: 250px;
+        position: absolute;
+    }
+    .header__price-update {
+        display: none;
+    }
+    .header__user-balance {
+        display: none;
+    }
+    .exchange {
+        padding-left: 0;
+    }
+    .navigation {
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .header__user {
+        justify-content: space-between;
+    }
+    .exchange__widget__order {
+        grid-template-columns: 1fr;
+        grid-row-gap: 50px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .fixed-table-toolbar .float-right {
+        float: unset !important;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .columns.columns-right.btn-group.float-right {
+        position: unset;
+    }
+    .fixed-table-toolbar .search input {
+        margin-bottom: 10px;
+    }
+    .exchange__widget__history {
+        padding-bottom: 40px;
+    }
+}
+
+.light #trading-chart-dark {
+    display: none;
+}
+
+.light #trading-chart-light {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+}
+
+.light {
+    background: #f5f6fa;
+}
+
+.light .exchange__widget,
+.light .exchange__widget__trading,
+.light .header,
+.light .navigation,
+.light .exchange__widget__history {
+    background: #ffffff;
+    box-shadow: 0px 0px 20px 0 #f1f1f1;
+}
+
+.light .dropdown-menu {
+    background: #ffffff;
+}
+
+.light .header__price-update ul li,
+.light .exchange__widget .nav-pills,
+.light .header__user-balance,
+.light .header__user-profile,
+.light .exchange__widget table tr:nth-child(even),
+.light .exchange__widget__order-note-item input,
+.light .dropdown-menu a:hover,
+.light .exchange__widget-slider-item,
+.light .exchange__widget-account-info,
+.light .exchange__widget__history thead,
+.light .fixed-table-toolbar .search input,
+.light .fixed-table-toolbar .columns button,
+.light .exchange__widget__history select,
+.light .pagination-detail span button,
+.light ul.pagination li a,
+.light .exchange-email-radio .custom-radio {
+    background: #f5f6fa;
+}
+
+.light .exchange__widget .nav-pills .nav-item a,
+.light .exchange__widget table tr td:first-child,
+.light .exchange__widget-title,
+.light .exchange__widget__order-note h2,
+.light .exchange__widget__order-note-item p,
+.light .exchange__widget__order-note-item input,
+.light .exchange__widget__order-note-item button,
+.light .header__price-update ul li,
+.light .header__user-balance-text h2,
+.light .header__user-profile-text h2,
+.light .navigation__item-label,
+.light .navigation__header-label,
+.light .navigation__footer-label,
+.light .exchange__widget input,
+.light .exchange__widget textarea,
+.light .dropdown-menu a,
+.light .exchange__widget-slider-item-content h2,
+.light .exchange__widget-slider-item-content p,
+.light .exchange__wallet-account,
+.light .table-bordered td,
+.light .table-bordered th,
+.light .exchange__widget__history select,
+.light .fixed-table-toolbar .search input,
+.light .pagination-detail,
+.light .page-size,
+.light ul.pagination li a,
+.light .exchange__widget__profile label,
+.light .exchange__widget__profile select,
+.light .exchange-email-verify,
+.light .exchange__widget label {
+    color: #000000 !important;
+}
+
+.light .exchange__widget .nav-pills .nav-item a.active,
+.light .navigation__item-link.active .navigation__item-label,
+.light .navigation-footer-link.active .navigation__footer-label,
+.light .navigation__item-link:hover .navigation__item-label,
+.light .navigation-footer-link:hover .navigation__footer-label {
+    color: #178cff !important;
+}
+
+.light .header__user-profile-icon span {
+    border-color: #ffffff;
+}
+
+.light .exchange__widget table tbody tr:hover {
+    background: #e3e8f5;
+}
+
+.light .dropdown-menu,
+.light .fixed-table-toolbar .search input,
+.light .fixed-table-toolbar .columns button,
+.light .exchange__widget__history select,
+.light .pagination-detail span button,
+.light ul.pagination li a,
+.light .exchange-email-radio .custom-radio {
+    border-color: #f7f7f7;
+}
+
+.light .apexcharts-gridline {
+    stroke: #efefef;
+}
+
+.light i.fa {
+    filter: invert(1);
+}
+
+.light .page-item.active .page-link {
+    color: #ffffff !important;
+}
+
+.light #themeChange .moon-icon {
+    display: none;
+}
+
+.light #themeChange .sun-icon {
+    display: inline-block;
+}
+
+.version3 {
+    background: url("../img/version3-bg.jpg") no-repeat center center/cover;
+}
+
+.version3 .exchange__widget,
+.version3 .exchange__widget__trading,
+.version3 .header,
+.version3 .navigation,
+.version3 .exchange__widget__history {
+    box-shadow: unset;
+    background: #000000a6;
+    border: 1px solid #00000061;
+}
+
+@supports (backdrop-filter: none) {
+    .version3 .exchange__widget,
+    .version3 .exchange__widget__trading,
+    .version3 .header,
+    .version3 .navigation,
+    .version3 .exchange__widget__history {
+        background: #000000a6;
+    }
+}
+
+.version3 .header__price-update ul li,
+.version3 .exchange__widget .nav-pills,
+.version3 .header__user-balance,
+.version3 .header__user-profile,
+.version3 .exchange__widget table tr:nth-child(even),
+.version3 .exchange__widget__order-note-item input,
+.version3 .dropdown-menu a:hover,
+.version3 .exchange__widget-slider-item,
+.version3 .exchange__widget-account-info,
+.version3 .exchange__widget__history thead,
+.version3 .fixed-table-toolbar .search input,
+.version3 .fixed-table-toolbar .columns button,
+.version3 .exchange__widget__history select,
+.version3 .pagination-detail span button,
+.version3 ul.pagination li a,
+.version3 .exchange-email-radio .custom-radio {
+    background: #ffffff0f;
+}
+
+.version3 .dropdown-menu {
+    background: #00000054;
+}
+
+.version3 .exchange__widget .nav-pills .nav-item a,
+.version3 .exchange__widget table tr td:first-child,
+.version3 .exchange__widget-title,
+.version3 .exchange__widget__order-note h2,
+.version3 .exchange__widget__order-note-item p,
+.version3 .exchange__widget__order-note-item input,
+.version3 .exchange__widget__order-note-item button,
+.version3 .header__price-update ul li,
+.version3 .header__user-balance-text h2,
+.version3 .header__user-profile-text h2,
+.version3 .navigation__item-label,
+.version3 .navigation__header-label,
+.version3 .navigation__footer-label,
+.version3 .exchange__widget input,
+.version3 .exchange__widget textarea,
+.version3 .dropdown-menu a,
+.version3 .exchange__widget-slider-item-content h2,
+.version3 .exchange__widget-slider-item-content p,
+.version3 .exchange__wallet-account,
+.version3 .table-bordered td,
+.version3 .table-bordered th,
+.version3 .fixed-table-toolbar .search input,
+.version3 .pagination-detail,
+.version3 .page-size,
+.version3 ul.pagination li a,
+.version3 .exchange__widget__profile label,
+.version3 .exchange__widget__profile select,
+.version3 .exchange-email-verify,
+.version3 .exchange__widget label,
+.version3 .exchange__widget td,
+.version3 .exchange__widget th,
+.version3 .header__price-update ul li span {
+    color: #ffffff !important;
+}
+
+.version3 .exchange__widget table tbody tr:hover {
+    background: #ffffff1f;
+}
+
+.version3 .header__user-profile-icon span,
+.version3 .fixed-table-toolbar .search input,
+.version3 .exchange__widget__history select,
+.version3 .fixed-table-toolbar .columns button,
+.version3 .pagination-detail span button,
+.version3 .page-item .page-link {
+    border-color: #ffffff0f;
+}
+
+.version3 .apexcharts-gridline {
+    stroke: #ffffff0f;
+}
+
+.version3 .navigation__item-link.active .navigation__item-label,
+.version3 .navigation-footer-link.active .navigation__footer-label,
+.version3 .navigation__item-link:hover .navigation__item-label,
+.version3 .navigation-footer-link:hover .navigation__footer-label {
+    color: #178cff !important;
+}
+
+.version4 {
+    width: 100%;
+    height: 100%;
+}
+
+#gradient-canvas {
+    width: 100%;
+    height: 100%;
+    --gradient-color-1: #a960ee;
+    --gradient-color-2: #ff333d;
+    --gradient-color-3: #90e0ff;
+    --gradient-color-4: #ffcb57;
+    z-index: 0;
+    position: fixed;
+}
+
+.version4 main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.version4 .exchange__widget,
+.version4 .exchange__widget__trading,
+.version4 .header,
+.version4 .navigation,
+.version4 .exchange__widget__history {
+    box-shadow: unset;
+    background: #000f77a1;
+    border: 1px solid #000f776b;
+}
+
+@supports (backdrop-filter: none) {
+    .version4 .exchange__widget,
+    .version4 .exchange__widget__trading,
+    .version4 .header,
+    .version4 .navigation,
+    .version4 .exchange__widget__history {
+        background: #000f77a1;
+    }
+}
+
+.version4 .header__price-update ul li,
+.version4 .exchange__widget .nav-pills,
+.version4 .header__user-balance,
+.version4 .header__user-profile,
+.version4 .exchange__widget table tr:nth-child(even),
+.version4 .exchange__widget__order-note-item input,
+.version4 .dropdown-menu a:hover,
+.version4 .exchange__widget-slider-item,
+.version4 .exchange__widget-account-info,
+.version4 .exchange__widget__history thead,
+.version4 .fixed-table-toolbar .search input,
+.version4 .fixed-table-toolbar .columns button,
+.version4 .exchange__widget__history select,
+.version4 .pagination-detail span button,
+.version4 ul.pagination li a,
+.version4 .exchange-email-radio .custom-radio {
+    background: #ffffff0f;
+}
+
+.version4 .dropdown-menu {
+    background: #00000054;
+}
+
+.version4 .exchange__widget .nav-pills .nav-item a,
+.version4 .exchange__widget table tr td:first-child,
+.version4 .exchange__widget-title,
+.version4 .exchange__widget__order-note h2,
+.version4 .exchange__widget__order-note-item p,
+.version4 .exchange__widget__order-note-item input,
+.version4 .exchange__widget__order-note-item button,
+.version4 .header__price-update ul li,
+.version4 .header__user-balance-text h2,
+.version4 .header__user-profile-text h2,
+.version4 .navigation__item-label,
+.version4 .navigation__header-label,
+.version4 .navigation__footer-label,
+.version4 .exchange__widget input,
+.version4 .exchange__widget textarea,
+.version4 .dropdown-menu a,
+.version4 .exchange__widget-slider-item-content h2,
+.version4 .exchange__widget-slider-item-content p,
+.version4 .exchange__wallet-account,
+.version4 .table-bordered td,
+.version4 .table-bordered th,
+.version4 .fixed-table-toolbar .search input,
+.version4 .pagination-detail,
+.version4 .page-size,
+.version4 ul.pagination li a,
+.version4 .exchange__widget__profile label,
+.version4 .exchange__widget__profile select,
+.version4 .exchange-email-verify,
+.version4 .exchange__widget label,
+.version4 .exchange__widget td,
+.version4 .exchange__widget th,
+.version4 .header__price-update ul li span {
+    color: #ffffff !important;
+}
+
+.version4 .exchange__widget table tbody tr:hover {
+    background: #ffffff1f;
+}
+
+.version4 .header__user-profile-icon span,
+.version4 .fixed-table-toolbar .search input,
+.version4 .exchange__widget__history select,
+.version4 .fixed-table-toolbar .columns button,
+.version4 .pagination-detail span button,
+.version4 .page-item .page-link {
+    border-color: #ffffff0f;
+}
+
+.version4 .apexcharts-gridline {
+    stroke: #ffffff0f;
+}
+
+.version4 .navigation__item-link.active .navigation__item-label,
+.version4 .navigation-footer-link.active .navigation__footer-label,
+.version4 .navigation__item-link:hover .navigation__item-label,
+.version4 .navigation-footer-link:hover .navigation__footer-label {
+    color: #178cff !important;
+}
+
+.version5 {
+    background: #0f0f0f;
+}
+
+.version5 .exchange__widget,
+.version5 .exchange__widget__trading,
+.version5 .header,
+.version5 .navigation,
+.version5 .exchange__widget__history {
+    box-shadow: unset;
+    background: #000000;
+    border: 1px solid #000000;
+}
+
+.version5 .header__price-update ul li,
+.version5 .exchange__widget .nav-pills,
+.version5 .header__user-balance,
+.version5 .header__user-profile,
+.version5 .exchange__widget table tr:nth-child(even),
+.version5 .exchange__widget__order-note-item input,
+.version5 .dropdown-menu a:hover,
+.version5 .exchange__widget-slider-item,
+.version5 .exchange__widget-account-info,
+.version5 .exchange__widget__history thead,
+.version5 .fixed-table-toolbar .search input,
+.version5 .fixed-table-toolbar .columns button,
+.version5 .exchange__widget__history select,
+.version5 .pagination-detail span button,
+.version5 ul.pagination li a,
+.version5 .exchange-email-radio .custom-radio {
+    background: #ffffff0f;
+}
+
+.version5 .dropdown-menu {
+    background: #0f0f0f;
+}
+
+.version5 .exchange__widget .nav-pills .nav-item a,
+.version5 .exchange__widget table tr td:first-child,
+.version5 .exchange__widget-title,
+.version5 .exchange__widget__order-note h2,
+.version5 .exchange__widget__order-note-item p,
+.version5 .exchange__widget__order-note-item input,
+.version5 .exchange__widget__order-note-item button,
+.version5 .header__price-update ul li,
+.version5 .header__user-balance-text h2,
+.version5 .header__user-profile-text h2,
+.version5 .navigation__item-label,
+.version5 .navigation__header-label,
+.version5 .navigation__footer-label,
+.version5 .exchange__widget input,
+.version5 .exchange__widget textarea,
+.version5 .dropdown-menu a,
+.version5 .exchange__widget-slider-item-content h2,
+.version5 .exchange__widget-slider-item-content p,
+.version5 .exchange__wallet-account,
+.version5 .table-bordered td,
+.version5 .table-bordered th,
+.version5 .fixed-table-toolbar .search input,
+.version5 .pagination-detail,
+.version5 .page-size,
+.version5 ul.pagination li a,
+.version5 .exchange__widget__profile label,
+.version5 .exchange__widget__profile select,
+.version5 .exchange-email-verify,
+.version5 .exchange__widget label,
+.version5 .exchange__widget td,
+.version5 .exchange__widget th,
+.version5 .header__price-update ul li span {
+    color: #ffffff !important;
+}
+
+.version5 .exchange__widget table tbody tr:hover {
+    background: #ffffff1f;
+}
+
+.version5 .header__user-profile-icon span,
+.version5 .fixed-table-toolbar .search input,
+.version5 .exchange__widget__history select,
+.version5 .fixed-table-toolbar .columns button,
+.version5 .pagination-detail span button,
+.version5 .page-item .page-link {
+    border-color: #ffffff0f;
+}
+
+.version5 .apexcharts-gridline {
+    stroke: #ffffff0f;
+}
+
+.version5 .navigation__item-link.active .navigation__item-label,
+.version5 .navigation-footer-link.active .navigation__footer-label,
+.version5 .navigation__item-link:hover .navigation__item-label,
+.version5 .navigation-footer-link:hover .navigation__footer-label {
+    color: #178cff !important;
+}
+
+/*# sourceMappingURL=style.css.map */
