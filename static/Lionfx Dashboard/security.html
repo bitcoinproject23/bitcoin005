@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from coinly.netlify.app/version5/api.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 16:13:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coinly</title>
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="version5">
+  <main class="exchange">
+    <nav class="navigation">
+      <div class="navigation__header">
+        <a href="index.html" class="navigation-header-link">
+          <span class="navigation__header-icon-wrapper"><img src="assets/img/logo.svg"
+              class="svgInject navigation__header-icon" alt="logo"></span>
+          <span class="navigation__header-label">Coinly</span>
+        </a>
+      </div>
+      <div class="navigation__list">
+        <ul>
+          <li class="navigation__item"><a href="index.html" class="navigation__item-link">
+              <span class="navigation__item-icon-wrapper"><img src="assets/img/svg-icon/dash.svg"
+                  class="svgInject navigation__item-icon" alt="svg"></span>
+              <span class="navigation__item-label">Overview</span>
+            </a></li>
+          <li class="navigation__item"><a href="markets.html" class="navigation__item-link">
+              <span class="navigation__item-icon-wrapper"><img src="assets/img/svg-icon/chart-pie.svg"
+                  class="svgInject navigation__item-icon" alt="svg"></span>
+              <span class="navigation__item-label">Markets</span>
+            </a></li>
+          <li class="navigation__item"><a href="analysis.html" class="navigation__item-link">
+              <span class="navigation__item-icon-wrapper"><img src="assets/img/svg-icon/chart-bar.svg"
+                  class="svgInject navigation__item-icon" alt="svg"></span>
+              <span class="navigation__item-label">Analysis</span>
+            </a></li>
+          <li class="navigation__item"><a href="wallets.html" class="navigation__item-link">
+              <span class="navigation__item-icon-wrapper"><img src="assets/img/svg-icon/wallet.svg"
+                  class="svgInject navigation__item-icon" alt="svg"></span>
+              <span class="navigation__item-label">Wallets</span>
+            </a></li>
+          <li class="navigation__item"><a href="history.html" class="navigation__item-link">
+              <span class="navigation__item-icon-wrapper"><img src="assets/img/svg-icon/history.svg"
+                  class="svgInject navigation__item-icon" alt="svg"></span>
+              <span class="navigation__item-label">History</span>
+            </a></li>
+          <li class="navigation__item"><a href="profile.html" class="navigation__item-link">
+              <span class="navigation__item-icon-wrapper"><img src="assets/img/svg-icon/user.svg"
+                  class="svgInject navigation__item-icon" alt="svg"></span>
+              <span class="navigation__item-label">Profile</span>
+            </a></li>
+        </ul>
+      </div>
+      <div class="navigation__footer">
+        <a href="settings.html" class="navigation-footer-link active">
+          <span class="navigation__footer-icon-wrapper"><img src="assets/img/svg-icon/settings.svg"
+              class="svgInject navigation__footer-icon" alt="svg"></span>
+          <span class="navigation__footer-label">Settings</span>
+        </a>
+      </div>
+    </nav>
+    <div class="exchange__wrapper">
+      <div class="container-fluid">
+        <div class="row sm-gutters">
+          <div class="col-md-12">
+            <div class="header">
+              <div class="row">
+                <div class="col-lg-12 col-xl-6">
+                  <div class="header__price-update">
+                    <ul>
+                      <li>3.33223838 BTC<span>Last Trade Price</span></li>
+                      <li>4.55% <span>Price (24h)</span></li>
+                      <li>4.82383 BTC<span>Volume (24h)</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-xl-6">
+                  <div class="header__user">
+                    <div class="header__sidebar-icon">
+                      <img src="assets/img/svg-icon/left-bar.svg" class="svgInject" alt="svg">
+                    </div>
+                    <div class="header__user-balance">
+                      <div class="header__user-balance-icon">
+                        <img src="assets/img/svg-icon/wallet.svg" class="svgInject" alt="svg">
+                      </div>
+                      <div class="header__user-balance-text">
+                        <h2>Balance: <span>$149,421.97</span></h2>
+                        <span class="green">Growth: <img src="assets/img/svg-icon/up-arrow.svg" class="svgInject"
+                            alt="svg"> 26.72%
+                        </span>
+                      </div>
+                    </div>
+                    <div class="header__user-profile dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
+                      <div class="header__user-profile-icon">
+                        <img src="assets/img/svg-icon/avatar.svg" class="svgInject" alt="svg">
+                        <span>9</span>
+                      </div>
+                      <div class="header__user-profile-text">
+                        <h2>Elon Musk</h2>
+                        <span><img src="assets/img/svg-icon/check.svg" class="svgInject" alt="svg"> verified</span>
+                      </div>
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="settings.html"><img src="assets/img/svg-icon/settings-line.svg"
+                          class="svgInject" alt="svg"> Settings</a>
+                      <a class="dropdown-item" href="verification.html"><img src="assets/img/svg-icon/user.svg"
+                          class="svgInject" alt="svg"> Verification</a>
+                      <a class="dropdown-item" href="security.html"><img src="assets/img/svg-icon/lock.svg"
+                          class="svgInject" alt="svg"> Security</a>
+                      <a class="dropdown-item" href="api.html"><img src="assets/img/svg-icon/code.svg" class="svgInject"
+                          alt="svg"> API</a>
+                      <a class="dropdown-item" id="themeChange" href="#"><img src="assets/img/svg-icon/sun.svg"
+                          class="svgInject sun-icon" alt="svg"><img src="assets/img/svg-icon/moon.svg"
+                          class="svgInject moon-icon" alt="svg"> Theme</a>
+                      <a class="dropdown-item red" href="login.html"><img src="assets/img/svg-icon/power.svg"
+                          class="svgInject" alt="svg"> Logout</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="exchange__widget">
+              <h2 class="exchange__widget-title">Create API Key</h2>
+              <div class="settings-api-key">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="generateKey">Generate key name</label>
+                    <input id="generateKey" type="text" class="form-control" placeholder="Enter your key name">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="rewritePassword">Confirm password</label>
+                    <input id="rewritePassword" type="password" class="form-control"
+                      placeholder="Confirm your password">
+                  </div>
+                  <div class="col-md-12">
+                    <button type="submit">Create API key</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="exchange__widget">
+              <h2 class="exchange__widget-title">Your API Keys</h2>
+              <div class="exchange__settings-api-list">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>Key</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody class="exchange__widget__table">
+                    <tr>
+                      <td>1</td>
+                      <td>zRmWVcrAZ1C0RZkFMu7K5v0KWC9jUJLt</td>
+                      <td>
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="apiStatus1" checked="">
+                          <label class="custom-control-label" for="apiStatus1"></label>
+                        </div>
+                      </td>
+                      <td><img src="assets/img/svg-icon/trash.svg" class="svgInject" alt="svg"></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>DKSLLJLLLFDH3JD828DSJ39DSHOH3HDSF</td>
+                      <td>
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="apiStatus2">
+                          <label class="custom-control-label" for="apiStatus2"></label>
+                        </div>
+                      </td>
+                      <td><img src="assets/img/svg-icon/trash.svg" class="svgInject" alt="svg"></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>LJSDL3IDKJ3JD093JLJDJ3K3FSDLJLJL3S3L</td>
+                      <td>
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="apiStatus3">
+                          <label class="custom-control-label" for="apiStatus3"></label>
+                        </div>
+                      </td>
+                      <td><img src="assets/img/svg-icon/trash.svg" class="svgInject" alt="svg"></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>SDFLJL3J8DFDSLJ3829KSFLJLJ3JLJSDF83R</td>
+                      <td>
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="apiStatus4">
+                          <label class="custom-control-label" for="apiStatus4"></label>
+                        </div>
+                      </td>
+                      <td><img src="assets/img/svg-icon/trash.svg" class="svgInject" alt="svg"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="exchange__widget">
+              <h2 class="exchange__widget-title">Notifications</h2>
+              <div class="settings-notification">
+                <ul>
+                  <li>
+                    <div class="notification-info">
+                      <p>Update price</p>
+                      <span>Get the update price in your dashboard</span>
+                    </div>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="notification1">
+                      <label class="custom-control-label" for="notification1"></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="notification-info">
+                      <p>2FA</p>
+                      <span>Unable two factor authentication service</span>
+                    </div>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="notification2" checked="">
+                      <label class="custom-control-label" for="notification2"></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="notification-info">
+                      <p>Latest news</p>
+                      <span>Get the latest news in your mail</span>
+                    </div>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="notification3">
+                      <label class="custom-control-label" for="notification3"></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="notification-info">
+                      <p>Email Service</p>
+                      <span>Get security code in your mail</span>
+                    </div>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="notification4" checked="">
+                      <label class="custom-control-label" for="notification4"></label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="notification-info">
+                      <p>Phone Notify</p>
+                      <span>Get transition notification in your phone </span>
+                    </div>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="notification5" checked="">
+                      <label class="custom-control-label" for="notification5"></label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/svg-inject.min.js"></script>
+  <script src="assets/js/tradingview-lightweight-min.js"></script>
+  <script src="assets/js/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/amcharts-core.min.js"></script>
+  <script src="assets/js/amcharts.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+
+<!-- Mirrored from coinly.netlify.app/version5/api.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 16:13:33 GMT -->
+</html>

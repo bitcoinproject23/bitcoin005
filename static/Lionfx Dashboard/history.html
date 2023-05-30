@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LionFx</title>
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body class="version5">
+  <main class="exchange">
+
+    <nav class="navigation">
+      <div class="navigation__header">
+        <a href="index.html" class="navigation-header-link">
+          <span class="navigation__header-icon-wrapper"><img src="assets/img/logo.svg"
+              class="svgInject navigation__header-icon" alt="logo"></span>
+          <span class="navigation__header-label">LionFx</span>
+        </a>
+      </div>
+      <div class="navigation__list">
+        <ul>
+          <li class="navigation__item"><a href="index.html" class="navigation__item-link">
+              <span class="navigation__item-icon-wrapper"><img src="assets/img/svg-icon/dash.svg"
+                  class="svgInject navigation__item-icon" alt="svg"></span>
+              <span class="navigation__item-label">Overview</span>
+            </a></li>
+        
+          <li class="navigation__item"><a href="wallets.html" class="navigation__item-link">
+              <span class="navigation__item-icon-wrapper"><img src="assets/img/svg-icon/wallet.svg"
+                  class="svgInject navigation__item-icon" alt="svg"></span>
+              <span class="navigation__item-label">Wallets</span>
+            </a></li>
+          <li class="navigation__item"><a href="history.html" class="navigation__item-link active">
+              <span class="navigation__item-icon-wrapper"><img src="assets/img/svg-icon/history.svg"
+                  class="svgInject navigation__item-icon" alt="svg"></span>
+              <span class="navigation__item-label">History</span>
+            </a></li>
+          <li class="navigation__item"><a href="profile.html" class="navigation__item-link">
+              <span class="navigation__item-icon-wrapper"><img src="assets/img/svg-icon/user.svg"
+                  class="svgInject navigation__item-icon" alt="svg"></span>
+              <span class="navigation__item-label">Profile</span>
+            </a></li>
+        </ul>
+      </div>
+      <div class="navigation__footer">
+        <a href="settings.html" class="navigation-footer-link">
+          <span class="navigation__footer-icon-wrapper"><img src="assets/img/svg-icon/settings.svg"
+              class="svgInject navigation__footer-icon" alt="svg"></span>
+          <span class="navigation__footer-label">Settings</span>
+        </a>
+      </div>
+    </nav>
+    <div class="exchange__wrapper">
+      <div class="container-fluid">
+        <div class="row sm-gutters">
+          <div class="col-md-12">
+            <div class="header">
+              <div class="row">
+                <div class="col-lg-12 col-xl-6">
+                  <div class="header__price-update">
+                    <ul>
+                      <li>0.00000000 BTC<span>Last Trade Price</span></li>
+                      <li>0.00% <span>Price (24h)</span></li>
+                      <li>0.00000 BTC<span>Volume (24h)</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-xl-6">
+                  <div class="header__user">
+                    <div class="header__sidebar-icon">
+                      <img src="assets/img/svg-icon/left-bar.svg" class="svgInject" alt="svg">
+                    </div>
+                    <div class="header__user-balance">
+                      <div class="header__user-balance-icon">
+                        <img src="assets/img/svg-icon/wallet.svg" class="svgInject" alt="svg">
+                      </div>
+                      <div class="header__user-balance-text">
+                        <h2>Balance: <span>$0000.00</span></h2>
+                        <span class="green">Growth: <img src="assets/img/svg-icon/up-arrow.svg" class="svgInject"
+                            alt="svg"> 0.0%
+                        </span>
+                      </div>
+                    </div>
+                    <div class="header__user-profile dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <div class="header__user-profile-icon">
+                        <img src="assets/img/svg-icon/avatar.svg" class="svgInject" alt="svg">
+                        <span>0</span>
+                      </div>
+                      <div class="header__user-profile-text">
+                        <h2>Elon Musk</h2>
+                        <span><img src="assets/img/svg-icon/check.svg" class="svgInject" alt="svg"> verified</span>
+                      </div>
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="settings.html"><img src="assets/img/svg-icon/settings-line.svg"
+                          class="svgInject" alt="svg"> Settings</a>
+                     
+                      <a class="dropdown-item" href="security.html"><img src="assets/img/svg-icon/code.svg" class="svgInject"
+                          alt="svg">Security</a>
+                     
+                      <a class="dropdown-item red" href="login.html"><img src="assets/img/svg-icon/power.svg"
+                          class="svgInject" alt="svg"> Logout</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="exchange__widget__history">
+              <div class="select">
+                <select class="form-control" id="locale">
+                  <option value="af-ZA">af-ZA</option>
+                  <option value="ar-SA">ar-SA</option>
+                  <option value="ca-ES">ca-ES</option>
+                  <option value="cs-CZ">cs-CZ</option>
+                  <option value="da-DK">da-DK</option>
+                  <option value="de-DE">de-DE</option>
+                  <option value="el-GR">el-GR</option>
+                  <option value="en-US" selected>en-US</option>
+                  <option value="es-AR">es-AR</option>
+                  <option value="es-CL">es-CL</option>
+                  <option value="es-CR">es-CR</option>
+                  <option value="es-ES">es-ES</option>
+                  <option value="es-MX">es-MX</option>
+                  <option value="es-NI">es-NI</option>
+                  <option value="es-SP">es-SP</option>
+                  <option value="et-EE">et-EE</option>
+                  <option value="eu-EU">eu-EU</option>
+                  <option value="fa-IR">fa-IR</option>
+                  <option value="fi-FI">fi-FI</option>
+                  <option value="fr-BE">fr-BE</option>
+                  <option value="fr-FR">fr-FR</option>
+                  <option value="he-IL">he-IL</option>
+                  <option value="hr-HR">hr-HR</option>
+                  <option value="hu-HU">hu-HU</option>
+                  <option value="id-ID">id-ID</option>
+                  <option value="it-IT">it-IT</option>
+                  <option value="ja-JP">ja-JP</option>
+                  <option value="ka-GE">ka-GE</option>
+                  <option value="ko-KR">ko-KR</option>
+                  <option value="ms-MY">ms-MY</option>
+                  <option value="nb-NO">nb-NO</option>
+                  <option value="nl-NL">nl-NL</option>
+                  <option value="pl-PL">pl-PL</option>
+                  <option value="pt-BR">pt-BR</option>
+                  <option value="pt-PT">pt-PT</option>
+                  <option value="ro-RO">ro-RO</option>
+                  <option value="ru-RU">ru-RU</option>
+                  <option value="sk-SK">sk-SK</option>
+                  <option value="sv-SE">sv-SE</option>
+                  <option value="th-TH">th-TH</option>
+                  <option value="tr-TR">tr-TR</option>
+                  <option value="uk-UA">uk-UA</option>
+                  <option value="ur-PK">ur-PK</option>
+                  <option value="vi-VN">vi-VN</option>
+                  <option value="zh-CN">zh-CN</option>
+                  <option value="zh-TW">zh-TW</option>
+                </select>
+              </div>
+              <div id="toolbar">
+                <button id="remove" class="btn btn-danger" disabled>
+                  <img src="assets/img/svg-icon/trash.svg" class="svgInject" alt="svg"> Delete
+                </button>
+              </div>
+              <table id="table" data-toolbar="#toolbar" data-search="true" data-show-refresh="true"
+                data-show-columns="true" data-show-columns-toggle-all="true" data-detail-view="true"
+                data-show-export="true" data-click-to-select="true" data-detail-formatter="detailFormatter"
+                data-minimum-count-columns="2" data-show-pagination-switch="true" data-pagination="true"
+                data-id-field="id" data-page-list="[10, 25, 50, 100, all]" data-show-footer="true"
+                data-side-pagination="server" data-url="assets/data.json" data-response-handler="responseHandler">
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/svg-inject.min.js"></script>
+  <script src="assets/js/tradingview-lightweight-min.js"></script>
+  <script src="assets/js/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/amcharts-core.min.js"></script>
+  <script src="assets/js/amcharts.min.js"></script>
+  <script src="assets/js/bootstrap-table.min.js"></script>
+  <script src="assets/js/tableExport.min.js"></script>
+  <script src="assets/js/bootstrap-table-locale-all.min.js"></script>
+  <script src="assets/js/bootstrap-table-export.min.js"></script>
+  <script src="assets/js/custom-bootstrap-table.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+
+<!-- Mirrored from LionFx.netlify.app/version5/history.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 May 2023 16:13:28 GMT -->
+
+</html>
