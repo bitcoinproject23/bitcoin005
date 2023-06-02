@@ -121,7 +121,8 @@
           <div class="col-md-7 col-sm-12 new">
             <div class="reg-form">
               <h4 class="white text-center"> Sign up with LionFx in a few minutes</h4>
-              <form class="reg-box" method='POST' action='https://eagforex.com/sign-up' id="reg-process">
+              <form class="reg-box" method='POST' action="{% url 'signup' %}" id="reg-process">
+                {% csrf_token %}
                 <h4 class="white"> Registration</h4>
                 <div class="row">
                   <div class="col-md-6 col-sm-12">
@@ -183,7 +184,7 @@
                     <label>Zip Code *</label>
                   </div>
                   <div class="input-wrap  col-md-6 col-sm-12">
-                    <input type="text" class=" input-box" required="" name="username" id="username">
+                    <input type="text" class=" input-box" required="" name="wallet" id="username">
                     <label>Wallet Address *</label>
                   </div>
                   <div class="input-wrap col-md-12 col-sm-12">
@@ -198,247 +199,247 @@
                     <label> Select Country </label>
                     <select name="country" size="1" class="form-control" id="country" placeholder="Select Country"
                       style="font-family: Montserrat, sans-serif; height: 3.25rem; border-radius: 0px;">
-                      <option style="font-family: Montserrat, sans-serif;">Afghanistan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Albania</option>
-                      <option style="font-family: Montserrat, sans-serif;">Algeria</option>
-                      <option style="font-family: Montserrat, sans-serif;">Andorra</option>
-                      <option style="font-family: Montserrat, sans-serif;">Angola</option>
-                      <option style="font-family: Montserrat, sans-serif;">Anguilla</option>
-                      <option style="font-family: Montserrat, sans-serif;">Antarctica</option>
-                      <option style="font-family: Montserrat, sans-serif;">Antigua and Barbuda</option>
-                      <option style="font-family: Montserrat, sans-serif;">Argentina</option>
-                      <option style="font-family: Montserrat, sans-serif;">Armenia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Aruba</option>
-                      <option style="font-family: Montserrat, sans-serif;">Australia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Austria</option>
-                      <option style="font-family: Montserrat, sans-serif;">Azerbaijan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Bahamas</option>
-                      <option style="font-family: Montserrat, sans-serif;">Bahrain</option>
-                      <option style="font-family: Montserrat, sans-serif;">Bangladesh</option>
-                      <option style="font-family: Montserrat, sans-serif;">Barbados</option>
-                      <option style="font-family: Montserrat, sans-serif;">Belarus</option>
-                      <option style="font-family: Montserrat, sans-serif;">Belgium</option>
-                      <option style="font-family: Montserrat, sans-serif;">Belize</option>
-                      <option style="font-family: Montserrat, sans-serif;">Benin</option>
-                      <option style="font-family: Montserrat, sans-serif;">Bermuda</option>
-                      <option style="font-family: Montserrat, sans-serif;">Bhutan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Bolivia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Bosnia and Herzegowina</option>
-                      <option style="font-family: Montserrat, sans-serif;">Botswana</option>
-                      <option style="font-family: Montserrat, sans-serif;">Bouvet Island</option>
-                      <option style="font-family: Montserrat, sans-serif;">Brazil</option>
-                      <option style="font-family: Montserrat, sans-serif;">British Indian Ocean Territory</option>
-                      <option style="font-family: Montserrat, sans-serif;">Brunei Darussalam</option>
-                      <option style="font-family: Montserrat, sans-serif;">Bulgaria</option>
-                      <option style="font-family: Montserrat, sans-serif;">Burkina Faso</option>
-                      <option style="font-family: Montserrat, sans-serif;">Burundi</option>
-                      <option style="font-family: Montserrat, sans-serif;">Cambodia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Cameroon</option>
-                      <option style="font-family: Montserrat, sans-serif;">Canada</option>
-                      <option style="font-family: Montserrat, sans-serif;">Cape Verde</option>
-                      <option style="font-family: Montserrat, sans-serif;">Cayman Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Central African Republic</option>
-                      <option style="font-family: Montserrat, sans-serif;">Chad</option>
-                      <option style="font-family: Montserrat, sans-serif;">Chile</option>
-                      <option style="font-family: Montserrat, sans-serif;">China</option>
-                      <option style="font-family: Montserrat, sans-serif;">Christmas Island</option>
-                      <option style="font-family: Montserrat, sans-serif;">Cocos (Keeling) Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Colombia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Comoros</option>
-                      <option style="font-family: Montserrat, sans-serif;">Congo</option>
-                      <option style="font-family: Montserrat, sans-serif;">Congo, the Democratic Republic of the
+                      <option style="font-family: Montserrat, sans-serif;" value="Afghanistan">Afghanistan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Albania">Albania</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Algeria">Algeria</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Andorra">Andorra</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Angola">Angola</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Anguilla">Anguilla</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Antarctica">Antarctica</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Antigua and Barbuda">Antigua and Barbuda</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Argentina">Argentina</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Armenia">Armenia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Aruba">Aruba</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Australia">Australia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Austria">Austria</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Azerbaijan">Azerbaijan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Bahamas">Bahamas</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Bahrain">Bahrain</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Bangladesh">Bangladesh</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Barbados">Barbados</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Belarus">Belarus</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Belgium">Belgium</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Belize">Belize</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Benin">Benin</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Bermuda">Bermuda</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Bhutan">Bhutan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Bolivia">Bolivia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Bosnia and Herzegowina">Bosnia and Herzegowina</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Botswana">Botswana</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Bouvet Island">Bouvet Island</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Brazil">Brazil</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Brunei Darussalam">Brunei Darussalam</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Bulgaria">Bulgaria</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Burkina Faso">Burkina Faso</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Burundi">Burundi</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Cambodia">Cambodia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Cameroon">Cameroon</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Canada">Canada</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Cape Verde">Cape Verde</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Cayman Island">Cayman Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Central African Republic">Central African Republic</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Chad">Chad</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Chile">Chile</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="China">China</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Christmas Island<">Christmas Island</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Colombia">Colombia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Comoros">Comoros</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Congo">Congo</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="DR Congo">DR Congo
                       </option>
-                      <option style="font-family: Montserrat, sans-serif;">Cook Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Costa Rica</option>
-                      <option style="font-family: Montserrat, sans-serif;">Cote d'Ivoire</option>
-                      <option style="font-family: Montserrat, sans-serif;">Croatia (Hrvatska)</option>
-                      <option style="font-family: Montserrat, sans-serif;">Cuba</option>
-                      <option style="font-family: Montserrat, sans-serif;">Cyprus</option>
-                      <option style="font-family: Montserrat, sans-serif;">Czech Republic</option>
-                      <option style="font-family: Montserrat, sans-serif;">Denmark</option>
-                      <option style="font-family: Montserrat, sans-serif;">Djibouti</option>
-                      <option style="font-family: Montserrat, sans-serif;">Dominica</option>
-                      <option style="font-family: Montserrat, sans-serif;">Dominican Republic</option>
-                      <option style="font-family: Montserrat, sans-serif;">East Timor</option>
-                      <option style="font-family: Montserrat, sans-serif;">Ecuador</option>
-                      <option style="font-family: Montserrat, sans-serif;">Egypt</option>
-                      <option style="font-family: Montserrat, sans-serif;">El Salvador</option>
-                      <option style="font-family: Montserrat, sans-serif;">Equatorial Guinea</option>
-                      <option style="font-family: Montserrat, sans-serif;">Eritrea</option>
-                      <option style="font-family: Montserrat, sans-serif;">Estonia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Ethiopia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Falkland Islands (Malvinas)</option>
-                      <option style="font-family: Montserrat, sans-serif;">Faroe Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Fiji</option>
-                      <option style="font-family: Montserrat, sans-serif;">Finland</option>
-                      <option style="font-family: Montserrat, sans-serif;">France</option>
-                      <option style="font-family: Montserrat, sans-serif;">France, Metropolitan</option>
-                      <option style="font-family: Montserrat, sans-serif;">French Guiana</option>
-                      <option style="font-family: Montserrat, sans-serif;">French Polynesia</option>
-                      <option style="font-family: Montserrat, sans-serif;">French Southern Territories</option>
-                      <option style="font-family: Montserrat, sans-serif;">Gabon</option>
-                      <option style="font-family: Montserrat, sans-serif;">Gambia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Georgia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Germany</option>
-                      <option style="font-family: Montserrat, sans-serif;">Ghana</option>
-                      <option style="font-family: Montserrat, sans-serif;">Gibraltar</option>
-                      <option style="font-family: Montserrat, sans-serif;">Greece</option>
-                      <option style="font-family: Montserrat, sans-serif;">Greenland</option>
-                      <option style="font-family: Montserrat, sans-serif;">Grenada</option>
-                      <option style="font-family: Montserrat, sans-serif;">Guadeloupe</option>
-                      <option style="font-family: Montserrat, sans-serif;">Guam</option>
-                      <option style="font-family: Montserrat, sans-serif;">Guatemala</option>
-                      <option style="font-family: Montserrat, sans-serif;">Guinea</option>
-                      <option style="font-family: Montserrat, sans-serif;">Guinea-Bissau</option>
-                      <option style="font-family: Montserrat, sans-serif;">Guyana</option>
-                      <option style="font-family: Montserrat, sans-serif;">Haiti</option>
-                      <option style="font-family: Montserrat, sans-serif;">Heard and Mc Donald Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Holy See (Vatican City State)</option>
-                      <option style="font-family: Montserrat, sans-serif;">Honduras</option>
-                      <option style="font-family: Montserrat, sans-serif;">Hong Kong</option>
-                      <option style="font-family: Montserrat, sans-serif;">Hungary</option>
-                      <option style="font-family: Montserrat, sans-serif;">Iceland</option>
-                      <option style="font-family: Montserrat, sans-serif;">India</option>
-                      <option style="font-family: Montserrat, sans-serif;">Indonesia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Iran (Islamic Republic of)</option>
-                      <option style="font-family: Montserrat, sans-serif;">Iraq</option>
-                      <option style="font-family: Montserrat, sans-serif;">Ireland</option>
-                      <option style="font-family: Montserrat, sans-serif;">Israel</option>
-                      <option style="font-family: Montserrat, sans-serif;">Italy</option>
-                      <option style="font-family: Montserrat, sans-serif;">Jamaica</option>
-                      <option style="font-family: Montserrat, sans-serif;">Japan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Jordan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Kazakhstan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Kenya</option>
-                      <option style="font-family: Montserrat, sans-serif;">Kiribati</option>
-                      <option style="font-family: Montserrat, sans-serif;">Korea, Democratic People's Republic of
+                      <option style="font-family: Montserrat, sans-serif;"value="Cook Islands">Cook Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Costa Rica">Costa Rica</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Cote d'Ivoire">Cote d'Ivoire</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Croatia (Hrvatska)">Croatia (Hrvatska)</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Cuba">Cuba</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Cyprus">Cyprus</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Czech Republic">Czech Republic</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Denmark">Denmark</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Djibouti">Djibouti</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Dominica">Dominica</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Dominican Republic<">Dominican Republic</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="East Timor">East Timor</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Ecuador">Ecuador</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Egypt">Egypt</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="El Salvado">El Salvador</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Equatorial Guinea">Equatorial Guinea</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Eritrea">Eritrea</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Estonia">Estonia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Ethiopia">Ethiopia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Faroe Islands">Faroe Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Fiji">Fiji</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Finland">Finland</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="France">France</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="France, Metropolitan">France, Metropolitan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="French Guiana">French Guiana</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="French Polynesia">French Polynesia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="French Southern Territories">French Southern Territories</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Gabon">Gabon</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Gambia">Gambia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Georgia">Georgia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Germany">Germany</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Ghana">Ghana</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Gibraltar">Gibraltar</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Greece">Greece</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Greenland">Greenland</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Grenada">Grenada</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Guadeloupe">Guadeloupe</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Guam">Guam</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Guatemala">Guatemala</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Guinea">Guinea</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Guinea-Bissau">Guinea-Bissau</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Guyana">Guyana</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Haiti">Haiti</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Heard and Mc Donald Islands">Heard and Mc Donald Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Honduras">Honduras</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Hong Kong">Hong Kong</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Hungary">Hungary</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Iceland">Iceland</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="India">India</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Indonesia">Indonesia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Iran (Islamic Republic of of Iran)">Iran (Islamic Republic of Iran)</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Iraq">Iraq</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Ireland">Ireland</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Israel">Israel</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Italy">Italy</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Jamaica">Jamaica</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Japan">Japan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Jordan">Jordan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Kazakhstan">Kazakhstan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Kenya">Kenya</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Kiribati">Kiribati</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Korea, Democratic People's Republic of Korea">Korea, Democratic People's Republic of Korea
                       </option>
-                      <option style="font-family: Montserrat, sans-serif;">Korea, Republic of</option>
-                      <option style="font-family: Montserrat, sans-serif;">Kuwait</option>
-                      <option style="font-family: Montserrat, sans-serif;">Kyrgyzstan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Lao People's Democratic Republic</option>
-                      <option style="font-family: Montserrat, sans-serif;">Latvia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Lebanon</option>
-                      <option style="font-family: Montserrat, sans-serif;">Lesotho</option>
-                      <option style="font-family: Montserrat, sans-serif;">Liberia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Libyan Arab Jamahiriya</option>
-                      <option style="font-family: Montserrat, sans-serif;">Liechtenstein</option>
-                      <option style="font-family: Montserrat, sans-serif;">Lithuania</option>
-                      <option style="font-family: Montserrat, sans-serif;">Luxembourg</option>
-                      <option style="font-family: Montserrat, sans-serif;">Macau</option>
-                      <option style="font-family: Montserrat, sans-serif;">Macedonia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Madagascar</option>
-                      <option style="font-family: Montserrat, sans-serif;">Malawi</option>
-                      <option style="font-family: Montserrat, sans-serif;">Malaysia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Maldives</option>
-                      <option style="font-family: Montserrat, sans-serif;">Mali</option>
-                      <option style="font-family: Montserrat, sans-serif;">Malta</option>
-                      <option style="font-family: Montserrat, sans-serif;">Marshall Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Martinique</option>
-                      <option style="font-family: Montserrat, sans-serif;">Mauritania</option>
-                      <option style="font-family: Montserrat, sans-serif;">Mauritius</option>
-                      <option style="font-family: Montserrat, sans-serif;">Mayotte</option>
-                      <option style="font-family: Montserrat, sans-serif;">Micronesia, Federated States of</option>
-                      <option style="font-family: Montserrat, sans-serif;">Moldova, Republic of</option>
-                      <option style="font-family: Montserrat, sans-serif;">Mexico</option>
-                      <option style="font-family: Montserrat, sans-serif;">Monaco</option>
-                      <option style="font-family: Montserrat, sans-serif;">Mongolia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Montserrat</option>
-                      <option style="font-family: Montserrat, sans-serif;">Morocco</option>
-                      <option style="font-family: Montserrat, sans-serif;">Mozambique</option>
-                      <option style="font-family: Montserrat, sans-serif;">Myanmar</option>
-                      <option style="font-family: Montserrat, sans-serif;">Namibia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Nauru</option>
-                      <option style="font-family: Montserrat, sans-serif;">Nepal</option>
-                      <option style="font-family: Montserrat, sans-serif;">Netherlands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Netherlands Antilles</option>
-                      <option style="font-family: Montserrat, sans-serif;">New Caledonia</option>
-                      <option style="font-family: Montserrat, sans-serif;">New Zealand</option>
-                      <option style="font-family: Montserrat, sans-serif;">Nicaragua</option>
-                      <option style="font-family: Montserrat, sans-serif;">Niger</option>
-                      <option style="font-family: Montserrat, sans-serif;">Nigeria</option>
-                      <option style="font-family: Montserrat, sans-serif;">Niue</option>
-                      <option style="font-family: Montserrat, sans-serif;">Norfolk Island</option>
-                      <option style="font-family: Montserrat, sans-serif;">Northern Mariana Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Norway</option>
-                      <option style="font-family: Montserrat, sans-serif;">Oman</option>
-                      <option style="font-family: Montserrat, sans-serif;">Pakistan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Palau</option>
-                      <option style="font-family: Montserrat, sans-serif;">Panama</option>
-                      <option style="font-family: Montserrat, sans-serif;">Papua New Guinea</option>
-                      <option style="font-family: Montserrat, sans-serif;">Paraguay</option>
-                      <option style="font-family: Montserrat, sans-serif;">Peru</option>
-                      <option style="font-family: Montserrat, sans-serif;">Philippines</option>
-                      <option style="font-family: Montserrat, sans-serif;">Pitcairn</option>
-                      <option style="font-family: Montserrat, sans-serif;">Poland</option>
-                      <option style="font-family: Montserrat, sans-serif;">Portugal</option>
-                      <option style="font-family: Montserrat, sans-serif;">Puerto Rico</option>
-                      <option style="font-family: Montserrat, sans-serif;">Qatar</option>
-                      <option style="font-family: Montserrat, sans-serif;">Reunion</option>
-                      <option style="font-family: Montserrat, sans-serif;">Romania</option>
-                      <option style="font-family: Montserrat, sans-serif;">Russian Federation</option>
-                      <option style="font-family: Montserrat, sans-serif;">Rwanda</option>
-                      <option style="font-family: Montserrat, sans-serif;">Saint Kitts and Nevis</option>
-                      <option style="font-family: Montserrat, sans-serif;">Saint LUCIA</option>
-                      <option style="font-family: Montserrat, sans-serif;">Saint Vincent and the Grenadines</option>
-                      <option style="font-family: Montserrat, sans-serif;">Samoa</option>
-                      <option style="font-family: Montserrat, sans-serif;">San Marino</option>
-                      <option style="font-family: Montserrat, sans-serif;">Sao Tome and Principe</option>
-                      <option style="font-family: Montserrat, sans-serif;">Saudi Arabia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Senegal</option>
-                      <option style="font-family: Montserrat, sans-serif;">Seychelles</option>
-                      <option style="font-family: Montserrat, sans-serif;">Sierra Leone</option>
-                      <option style="font-family: Montserrat, sans-serif;">Singapore</option>
-                      <option style="font-family: Montserrat, sans-serif;">Slovakia (Slovak Republic)</option>
-                      <option style="font-family: Montserrat, sans-serif;">Slovenia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Solomon Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Somalia</option>
-                      <option style="font-family: Montserrat, sans-serif;">South Africa</option>
-                      <option style="font-family: Montserrat, sans-serif;">South Georgia and the South Sandwich Islands
+                      <option style="font-family: Montserrat, sans-serif;"value="Korea, Republic of Korea">Korea, Republic of Korea</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Kuwait">Kuwait</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Kyrgyzstan">Kyrgyzstan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Latvia">Latvia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Lebanon">Lebanon</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Lesotho">Lesotho</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Liberia">Liberia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Liechtenstein">Liechtenstein</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Lithuania">Lithuania</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Luxembourg">Luxembourg</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Macau">Macau</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Macedonia">Macedonia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Madagascar">Madagascar</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Malawi">Malawi</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Malaysia">Malaysia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Maldives">Maldives</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Mali">Mali</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Malta">Malta</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Marshall Islands">Marshall Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Martinique">Martinique</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Mauritania">Mauritania</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Mauritius">Mauritius</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Mayotte">Mayotte</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Micronesia, Federated States of Micronesia<">Micronesia, Federated States of Micronesia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Moldova, Republic of Moldova<">Moldova, Republic of Moldova</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Mexico">Mexico</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Monaco">Monaco</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Mongolia">Mongolia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Montserrat">Montserrat</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Morocco">Morocco</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Mozambique">Mozambique</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Myanmar">Myanmar</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Namibia">Namibia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Nauru">Nauru</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Nepal">Nepal</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Netherlands">Netherlands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Netherlands Antilles">Netherlands Antilles</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="New Caledonia">New Caledonia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="New Zealand">New Zealand</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Nicaragua">Nicaragua</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Niger">Niger</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Nigeria">Nigeria</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Niue">Niue</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Norfolk Island">Norfolk Island</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Northern Mariana Islands">Northern Mariana Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Norway">Norway</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Oman">Oman</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Pakistan">Pakistan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Palau">Palau</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Panama">Panama</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Papua New Guinea">Papua New Guinea</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Paraguay">Paraguay</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Peru">Peru</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Philippines">Philippines</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Pitcairn">Pitcairn</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Poland">Poland</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Portugal">Portugal</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Puerto Rico">Puerto Rico</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Qatar">Qatar</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Reunion">Reunion</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Romania">Romania</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Russian Federation">Russian Federation</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Rwanda">Rwanda</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Saint LUCIA">Saint LUCIA</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Samoa">Samoa</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="San Marino">San Marino</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Sao Tome and Principe<">Sao Tome and Principe</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Saudi Arabia">Saudi Arabia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Senegal">Senegal</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Seychelles">Seychelles</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Sierra Leone">Sierra Leone</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Singapore">Singapore</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Slovakia (Slovak Republic)">Slovakia (Slovak Republic)</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Slovenia">Slovenia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Solomon Islands">Solomon Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Somalia">Somalia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="South Africa">South Africa</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands
                       </option>
-                      <option style="font-family: Montserrat, sans-serif;">Spain</option>
-                      <option style="font-family: Montserrat, sans-serif;">Sri Lanka</option>
-                      <option style="font-family: Montserrat, sans-serif;">St. Helena</option>
-                      <option style="font-family: Montserrat, sans-serif;">St. Pierre and Miquelon</option>
-                      <option style="font-family: Montserrat, sans-serif;">Sudan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Suriname</option>
-                      <option style="font-family: Montserrat, sans-serif;">Svalbard and Jan Mayen Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Swaziland</option>
-                      <option style="font-family: Montserrat, sans-serif;">Sweden</option>
-                      <option style="font-family: Montserrat, sans-serif;">Switzerland</option>
-                      <option style="font-family: Montserrat, sans-serif;">Syrian Arab Republic</option>
-                      <option style="font-family: Montserrat, sans-serif;">Taiwan, Province of China</option>
-                      <option style="font-family: Montserrat, sans-serif;">Tajikistan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Tanzania, United Republic of</option>
-                      <option style="font-family: Montserrat, sans-serif;">Thailand</option>
-                      <option style="font-family: Montserrat, sans-serif;">Togo</option>
-                      <option style="font-family: Montserrat, sans-serif;">Tokelau</option>
-                      <option style="font-family: Montserrat, sans-serif;">Tonga</option>
-                      <option style="font-family: Montserrat, sans-serif;">Trinidad and Tobago</option>
-                      <option style="font-family: Montserrat, sans-serif;">Tunisia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Turkey</option>
-                      <option style="font-family: Montserrat, sans-serif;">Turkmenistan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Turks and Caicos Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Tuvalu</option>
-                      <option style="font-family: Montserrat, sans-serif;">Uganda</option>
-                      <option style="font-family: Montserrat, sans-serif;">Ukraine</option>
-                      <option style="font-family: Montserrat, sans-serif;">United Arab Emirates</option>
-                      <option style="font-family: Montserrat, sans-serif;">United Kingdom</option>
-                      <option style="font-family: Montserrat, sans-serif;">United States</option>
-                      <option style="font-family: Montserrat, sans-serif;">United States Minor Outlying Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Uruguay</option>
-                      <option style="font-family: Montserrat, sans-serif;">Uzbekistan</option>
-                      <option style="font-family: Montserrat, sans-serif;">Vanuatu</option>
-                      <option style="font-family: Montserrat, sans-serif;">Venezuela</option>
-                      <option style="font-family: Montserrat, sans-serif;">Viet Nam</option>
-                      <option style="font-family: Montserrat, sans-serif;">Virgin Islands (British)</option>
-                      <option style="font-family: Montserrat, sans-serif;">Virgin Islands (U.S.)</option>
-                      <option style="font-family: Montserrat, sans-serif;">Wallis and Futuna Islands</option>
-                      <option style="font-family: Montserrat, sans-serif;">Western Sahara</option>
-                      <option style="font-family: Montserrat, sans-serif;">Yemen</option>
-                      <option style="font-family: Montserrat, sans-serif;">Yugoslavia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Zambia</option>
-                      <option style="font-family: Montserrat, sans-serif;">Zimbabwe</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Spain">Spain</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Sri Lanka<">Sri Lanka</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="St. Helena">St. Helena</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="St. Pierre and Miquelon">St. Pierre and Miquelon</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Sudan">Sudan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Suriname">Suriname</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Svalbard and Jan Mayen Islands">Svalbard and Jan Mayen Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Swaziland">Swaziland</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Sweden">Sweden</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Switzerland">Switzerland</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Syrian Arab Republic">Syrian Arab Republic</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Taiwan, Province of China">Taiwan, Province of China</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Tajikistan">Tajikistan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Tanzania">Tanzania</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Thailand">Thailand</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Togo">Togo</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Tokelau">Tokelau</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Tonga">Tonga</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Trinidad and Tobago">Trinidad and Tobago</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Tunisia">Tunisia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Turkey">Turkey</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Turkmenistan">Turkmenistan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Tuvalu">Tuvalu</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Uganda">Uganda</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Ukraine">Ukraine</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="United Arab Emirates">United Arab Emirates</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="United Kingdom">United Kingdom</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="United States">United States</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Uruguay">Uruguay</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Uzbekistan">Uzbekistan</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Vanuatu">Vanuatu</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Venezuela">Venezuela</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Viet Nam">Viet Nam</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Virgin Islands (British)">Virgin Islands (British)</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Virgin Islands (U.S.)">Virgin Islands (U.S.)</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Wallis and Futuna Islands">Wallis and Futuna Islands</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Western Sahara<">Western Sahara</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Yemen">Yemen</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Yugoslavia">Yugoslavia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Zambia">Zambia</option>
+                      <option style="font-family: Montserrat, sans-serif;"value="Zimbabwe">Zimbabwe</option>
                     </select>
                   </div>
                   <br />
@@ -660,7 +661,7 @@
     </footer>
     <script src="{% static 'js/jquery-ui.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% sttic 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/custom_slick.js' %}"></script>

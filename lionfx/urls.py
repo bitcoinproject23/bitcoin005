@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from bitcoin.views import signUp
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("bitcoin.urls")),
+    # path("", include("bitcoin.urls")),
+    path("", signUp, name="signup"),
 ]

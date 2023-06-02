@@ -77,7 +77,7 @@ class CustomUser(AbstractBaseUser):
     zip_code = models.CharField(max_length=255)
     country = models.CharField(max_length=255)
     account_type = models.CharField(max_length=255)
-    account_tile = models.CharField(max_length=255)
+    account_title = models.CharField(max_length=255)
     currency = models.CharField(max_length=255)
     wallet = models.CharField(max_length=255)
     is_active = models.BooleanField(default=True)
@@ -95,7 +95,7 @@ class CustomUser(AbstractBaseUser):
         "zip_code",
         "country",
         "account_type",
-        "account_tile",
+        "account_title",
         "currency",
         "wallet",
     ]
