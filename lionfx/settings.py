@@ -25,6 +25,8 @@ SECRET_KEY = 'gm$^su5y0ka$%!-%iznyt(fvadwudzno=4n$rks#0#%l*w&j*f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+AUTH_USER_MODEL = 'bitcoin.CustomUser'
+
 ALLOWED_HOSTS = []
 
 

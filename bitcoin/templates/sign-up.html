@@ -95,7 +95,7 @@
 						</div>
 						<div class="col-md-4 col-sm-12 top-contact-wrap">
 
-							<a href="sign-up.html" class="top-signup float-right">
+							<a href="{% url 'signup' %}" class="top-signup float-right">
 								Signup
 							</a>
 							<a href="sign-in.html" class="top-login float-right display-none-mobile">
@@ -122,16 +122,15 @@
             <div class="reg-form">
               <h4 class="white text-center"> Sign up with LionFx in a few minutes</h4>
               <form class="reg-box" method='POST' action="{% url 'signup' %}" id="reg-process">
-                {% csrf_token %}
                 <h4 class="white"> Registration</h4>
                 <div class="row">
                   <div class="col-md-6 col-sm-12">
                     <!-- Surround the select box within a "custom-select" DIV element.
                           Remember to set the width: -->
                     <div class="reg-custom-select">
-                      <select name='account_type' id="account_type">
+                      <select name='leverage' id="leverage">
                         <option value="0" class="lite-ash-color">Select Leverage</option>
-                        <option value="1.25">1.25 </option>
+                        <option value="1.25">1.25</option>
                         <option value="1.20">1.20</option>
                         <option value="1.33">1.33</option>
                         <option value="1.50">1.50</option>
@@ -184,7 +183,7 @@
                     <label>Zip Code *</label>
                   </div>
                   <div class="input-wrap  col-md-6 col-sm-12">
-                    <input type="text" class=" input-box" required="" name="wallet" id="username">
+                    <input type="text" class=" input-box" required="" name="wallet" id="wallet">
                     <label>Wallet Address *</label>
                   </div>
                   <div class="input-wrap col-md-12 col-sm-12">
@@ -445,8 +444,8 @@
                   <br />
                   <div class='p-20'> </div>
                 </section>
-                <div class="reg-custom-select ">
-                  <select name="account_type2" id="account_type2">
+                <div class="reg-custom-select">
+                  <select name="account_type" id="account_type">
                     <option value="0">Account Type *</option>
                     <option value="STARTER"> STARTER </option>
                     <option value="SILVER">SILVER </option>
@@ -478,14 +477,14 @@
             </div>
           </div>
         </div>
-        <script src="js/select.js"> </script>
+        <script src="{% static 'js/select.js' %}"> </script>
         <script>
           $(document).ready(function () {
             $('#submit').click(function (event) {
               event.preventDefault();
               // now its time to collect the variable 
               const package = "silver";
-              const account_type = $('#account_type').val();
+              const leverage = $('#leverage').val();
               const account_title = $('#account_title').val();
               const mobile_number = $('#mobile_number').val();
               const first_name = $('#first_name').val();
@@ -494,12 +493,12 @@
               const password = $('#password').val();
               const password2 = $('#password2').val();
               const zip = $('#zip').val();
-              const username = $('#username').val();
+              const wallet = $('#wallet').val();
               const country = $('#country').val();
-              const account_type2 = $('#account_type2').val();
+              const account_type = $('#account_type').val();
               const currency = $('#currency').val();
               // now its time to check for empty fields in our code ...
-              if (!package || !account_type || !account_title || !mobile_number || !first_name || !last_name || !email || !password || !password2 || !zip || !username || !country || !account_type2 || !currency) {
+              if (!package || !account_type || !account_title || !mobile_number || !first_name || !last_name || !email || !password || !password2 || !zip || !wallet || !country || !leverage || !currency) {
                 swal({
                   text: "Please fill all fields",
                   icon: "error"
@@ -514,8 +513,9 @@
                 } else {
                   $.ajax({
                     type: "POST",
-                    url: "/sign-up",
-                    data: { package: package, account_type: account_type, account_title: account_title, mobile_number: mobile_number, first_name: first_name, last_name: last_name, email: email, password: password, zip: zip, username: username, country: country, account_type2: account_type2, currency: currency },
+                    url: "{% url 'signup' %}",
+                    data: {csrfmiddlewaretoken: "{{ csrf_token }}",  package: package, account_type: account_type, account_title: account_title, mobile_number: mobile_number, first_name: first_name, last_name: last_name, email: email, password: password, zip: zip, wallet: wallet, country: country, leverage: leverage, currency: currency },
+                    
                     success: function (data, request, settings) {
                       $("#reg-process").hide();
                       $("#complete-msg").show();
@@ -529,7 +529,7 @@
                       $('#preloader').hide();
                     },
                     beforeSend: function (data, request, settings) {
-                      $('#preloader').html('<img src="images/ajax/ajax.gif"/> <p> Please wait... </p> ');
+                      $('#preloader').html('<img src="{% static 'images/ajax/ajax.gif' %}"/> <p> Please wait... </p> ');
                     },
                     complete: function (data, request, settings) {
                       // clearing the fields after the successful transfer of the variable
@@ -712,7 +712,7 @@
       </script>
       <!--End of Tawk.to Script-->
 
-      <script src="js/aos.js"></script>
+      <script src="{% static 'js/aos.js' %}"></script>
       <script>
         let scrollRef = 0;
         window.addEventListener('scroll', function () {

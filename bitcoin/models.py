@@ -13,7 +13,7 @@ class CustomUserManager(BaseUserManager):
         zip_code,
         country,
         account_type,
-        account_tile,
+        account_title,
         currency,
         wallet,
     ):
@@ -26,7 +26,7 @@ class CustomUserManager(BaseUserManager):
             zip_code=zip_code,
             country=country,
             account_type=account_type,
-            account_tile=account_tile,
+            account_title=account_title,
             currency=currency,
             wallet=wallet,
         )
@@ -44,7 +44,7 @@ class CustomUserManager(BaseUserManager):
         zip_code,
         country,
         account_type,
-        account_tile,
+        account_title,
         currency,
         wallet,
     ):
@@ -57,7 +57,7 @@ class CustomUserManager(BaseUserManager):
             zip_code=zip_code,
             country=country,
             account_type=account_type,
-            account_tile=account_tile,
+            account_title=account_title,
             currency=currency,
             wallet=wallet,
         )
