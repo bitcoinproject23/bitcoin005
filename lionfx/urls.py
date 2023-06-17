@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from bitcoin.views import signUp
+from bitcoin.views import signUp, CustomLoginView, home
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path("", include("bitcoin.urls")),
-    path("", signUp, name="signup"),
+    path("signup", signUp, name="signup"),
+    path("login/", CustomLoginView.as_view(), name="login"),
+    path("", home, name="home"),
 ]

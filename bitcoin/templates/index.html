@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-
+{% load static %}
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, maximum-scale=1,shrink-to-fit=no, user-scalable=0" />
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/style_preloader.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style_preloader.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&amp;display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/jquery-ui.css">
-	<script src="js/jquery-ui.js"></script>
-	<script src="../kit.fontawesome.com/e44d5a293a.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+	<script src="{% static 'js/jquery-ui.js' %}"></script>
+	<script src="{% static 'js/kit.js' %}" crossorigin="anonymous"></script>
 	<title>Goodfxll | Discover the potentials of earning in an enhanced cryptocurrency system</title>
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/sweetalert.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-	<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+	<script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'js/sweetalert.min.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}" />
 	<link href="http://db.onlinewebfonts.com/c/15a9075ddf4ff1158eb03abbc873a3a4?family=Frank-Light" rel="stylesheet"
 		type="text/css" />
-	<script src="js/jquery.cycle.all.js"></script>
+	<script src="{% static 'js/jquery.cycle.all.js' %}"></script>
 	<script type="text/javascript">
 		$(window).on('load', function () {
 			$('.preloader').addClass('complete');
 		});
 	</script>
-	<link href="images/favicon.png" rel="icon" type="image/x-icon">
+	<link href="{% static 'images/favicon.png' %}" rel="icon" type="image/x-icon">
 </head>
 
 <body>
@@ -42,11 +42,11 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-12">
 							<a class="navbar-brand" href="index.html">
-								<img src="images/logo.png" class="brand" /></a>
+								<img src="{% static 'images/logo.png' %}" class="brand" /></a>
 							<button class="navbar-toggler" type="button" data-toggle="collapse"
 								data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 								aria-expanded="false" aria-label="Toggle navigation">
-								<img src="images/icon/hamburger-blk.png" />
+								<img src="{% static 'images/icon/hamburger-blk.png' %}" />
 							</button>
 						</div>
 						<!-- Navbar section -->
@@ -100,10 +100,10 @@
 						</div>
 						<div class="col-md-4 col-sm-12 top-contact-wrap">
 
-							<a href="sign-up.html" class="top-signup float-right">
+							<a href="{% url 'signup' %}" class="top-signup float-right">
 								Signup
 							</a>
-							<a href="./Lionfx Dashboard/index.html" class="top-login float-right display-none-mobile">
+							<a href="{% url 'login' %}" class="top-login float-right display-none-mobile">
 								Login
 							</a>
 						</div>
@@ -130,7 +130,7 @@
 							<div class="learn-btc">
 								<button class="play-btn float-left" type="button" data-toggle="modal"
 									data-target="#exampleModalCenter">
-									<img src="images/icon/play-button.svg">
+									<img src="{% static 'images/icon/play-button.svg' %}">
 								</button>
 								<span> Click here to learn about Bitcoin </span>
 							</div>
@@ -151,13 +151,13 @@
 							<div class="p-20"> </div>
 							<a href="sign-in.html">
 								<div class="create-acc c-sign-up">
-									<img src="images/icon/b-chart.png" class="float-left">
+									<img src="{% static 'images/icon/b-chart.png' %}" class="float-left">
 									<p> Login </p>
 								</div>
 							</a>
 						</div>
 						<div class="col-md-7 col-sm-12 ">
-							<img src="images/slider/slider.png">
+							<img src="{% static 'images/slider/slider.png' %}">
 						</div>
 					</div>
 				</div>
@@ -176,9 +176,9 @@
 								<li> <i class="fas fa-check" style="color: #684c6c"> </i> &nbsp Start Trading </li>
 							</ul>
 							<br />
-							<a href="sign-up.html">
+							<a href="{% url 'signup' %}">
 								<div class="create-acc lt-blue-bg">
-									<img src="images/icon/b-chart.png" class="float-left">
+									<img src="{% static 'images/icon/b-chart.png' %}" class="float-left">
 									<p> Start Earning </p>
 								</div>
 							</a>
@@ -249,19 +249,19 @@
 				<div class="container how-it-work" data-aos="fade-up">
 					<div class="row">
 						<div class="col-md-4 col-sm-12 how-it-work-inner">
-							<h5> <span> <img src="images/icon/deposit.svg"> </span> Deposit</h5>
+							<h5> <span> <img src="{% static 'images/icon/deposit.svg' %}"> </span> Deposit</h5>
 							<p class="lite-ash">
 								Open real account and add funds. We work with more than 20 payment systems.
 							</p>
 						</div>
 						<div class="col-md-4 col-sm-12 how-it-work-inner">
-							<h5> <span> <img src="images/icon/choose.svg"> </span> Trade</h5>
+							<h5> <span> <img src="{% static 'images/icon/choose.svg' %}"> </span> Trade</h5>
 							<p class="lite-ash">
 								Trade any of 100 assets and stocks. Use technical analysis and trade the news
 							</p>
 						</div>
 						<div class="col-md-4 col-sm-12 how-it-work-inner">
-							<h5> <span> <img src="images/icon/withdraw-small.svg"> </span> Withdraw</h5>
+							<h5> <span> <img src="{% static 'images/icon/withdraw-small.svg' %}"> </span> Withdraw</h5>
 							<p class="lite-ash">
 								Get funds easily to your bank card or e-wallet. We take no commission.
 							</p>
@@ -274,7 +274,7 @@
 			<section class="container" data-aos="fade-up">
 				<h1>
 					<span>
-						<img src="images/icon/features.svg">
+						<img src="{% static 'images/icon/features.svg' %}">
 					</span>
 					Features
 				</h1>
@@ -332,47 +332,47 @@
 							</thead>
 							<tbody>
 								<tr class="ash-bg">
-									<td> <img src="images/icon/instruments/btc.svg" alt="Bitcoin" class="m-4-neg">
+									<td> <img src="{% static 'images/icon/instruments/btc.svg' %}" alt="Bitcoin" class="m-4-neg">
 										<span> Bitcoin </span>
 									</td>
 									<td>100X</td>
-									<td> <img src="images/icon/instruments/btc.svg" alt="fx" class="m-4-neg"> EURUSD
+									<td> <img src="{% static 'images/icon/instruments/btc.svg' %}" alt="fx" class="m-4-neg"> EURUSD
 									</td>
 									<td> 1000X </td>
 								</tr>
 								<tr class="lite-ash-bg">
-									<td> <img src="images/icon/instruments/eth.svg" alt="Ethereum " class="m-4-neg">
+									<td> <img src="{% static 'images/icon/instruments/eth.svg' %}" alt="Ethereum " class="m-4-neg">
 										<span>
 											Ethereum</span>
 									</td>
 									<td>100X</td>
-									<td> <img src="images/icon/instruments/graph.svg" alt="S&P 500" class="m-4-neg"> S&P
+									<td> <img src="{% static 'images/icon/instruments/graph.svg' %}" alt="S&P 500" class="m-4-neg"> S&P
 										500 </td>
 									<td> 100X </td>
 								</tr>
 								<tr class="ash-bg">
-									<td> <img src="images/icon/instruments/ltc.svg" alt="Litecoin" class="m-4-neg">
+									<td> <img src="{% static 'images/icon/instruments/ltc.svg' %}" alt="Litecoin" class="m-4-neg">
 										<span> Litecoin
 										</span>
 									</td>
 									<td>100X</td>
-									<td> <img src="images/icon/instruments/gold.svg" alt="GOLD" class="m-4-neg"> GOLD
+									<td> <img src="{% static 'images/icon/instruments/gold.svg' %}" alt="GOLD" class="m-4-neg"> GOLD
 									</td>
 									<td> 5000X </td>
 								</tr>
 								<tr class="lite-ash-bg">
-									<td> <img src="images/icon/instruments/ripple.svg" alt="Ripple " class="m-4-neg">
+									<td> <img src="{% static 'images/icon/instruments/ripple.svg' %}" alt="Ripple " class="m-4-neg">
 										<span> Ripple</span>
 									</td>
 									<td>100X</td>
-									<td> <img src="images/icon/instruments/oil.svg" alt="CRUDE OIL" class="m-4-neg">
+									<td> <img src="{% static 'images/icon/instruments/oil.svg' %}" alt="CRUDE OIL" class="m-4-neg">
 										CRUDE OIL </td>
 									<td> 100X </td>
 								<tr class="ash-bg">
-									<td> <img src="images/icon/instruments/ltc.svg" alt="EOS" class="m-4-neg"> <span>
+									<td> <img src="{% static 'images/icon/instruments/ltc.svg' %}" alt="EOS" class="m-4-neg"> <span>
 											EOS </span> </td>
 									<td>100X</td>
-									<td> <img src="images/icon/instruments/graph.svg" alt="JAPAN" class="m-4-neg"> JAPAN
+									<td> <img src="{% static 'images/icon/instruments/graph.svg' %}" alt="JAPAN" class="m-4-neg"> JAPAN
 									</td>
 									<td> 5000X </td>
 								</tr>
@@ -403,7 +403,7 @@
 					<div class="row">
 						<div class="col-md-4 col-sm-12 p-20">
 							<div class="p-chart">
-								<img src="images/higher-chart.svg">
+								<img src="{% static 'images/higher-chart.svg' %}">
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-12">
@@ -421,7 +421,7 @@
 						</div>
 						<div class="col-md-4 col-sm-12 p-20">
 							<div class="p-chart">
-								<img src="images/lower-chart.svg">
+								<img src="{% static 'images/lower-chart.svg' %}">
 							</div>
 						</div>
 					</div>
@@ -452,7 +452,7 @@
 
 								<br />
 
-								<a href="sign-up.html">
+								<a href="{% url 'signup' %}">
 									<div class="plan-signup">
 										<center>
 											Sign up &nbsp <i class="fas fa-user dark-gold"></i>
@@ -499,7 +499,7 @@
 
 								<br />
 
-								<a href="sign-up.html">
+								<a href="{% url 'signup' %}">
 									<div class="plan-signup">
 										<center>
 											Sign up &nbsp <i class="fas fa-user dark-gold"></i>
@@ -523,7 +523,7 @@
 								<br />
 
 								<div class="clearfix"></div>
-								<a href="sign-up.html">
+								<a href="{% url 'signup' %}">
 									<div class="plan-signup">
 										<center>
 											Sign up &nbsp <i class="fas fa-user dark-gold"></i>
@@ -544,16 +544,16 @@
 				<p class="text-center white"> Payment Methods for Deposit and withdrawal </p>
 				<div class="row">
 					<div class="col-md-3 col-sm-6">
-						<img src="images/ethereum.png">
+						<img src="{% static 'images/ethereum.png' %}">
 					</div>
 					<div class="col-md-3 col-sm-6">
-						<img src="images/bitcoin.png">
+						<img src="{% static 'images/bitcoin.png' %}">
 					</div>
 					<div class="col-md-3 col-sm-6">
-						<img src="images/litecoin.png">
+						<img src="{% static 'images/litecoin.png' %}">
 					</div>
 					<div class="col-md-3 col-sm-6">
-						<img src="images/perfect-money.png">
+						<img src="{% static 'images/perfect-money.png' %}">
 					</div>
 				</div>
 			</div>
@@ -567,10 +567,10 @@
 			<div class="container">
 				<div class="p-20"></div>
 				<div class="footer-logo float-left">
-					<img src="images/logo.png" alt="LionFx" />
+					<img src="{% static 'images/logo.png' %}" alt="LionFx" />
 				</div>
 				<div class="footer-logo float-right">
-					<img src="images/ssl.png" alt="LionFx" />
+					<img src="{% static 'images/ssl.png' %}" alt="LionFx" />
 				</div>
 				<div class="clear-fix"></div>
 				<hr />
@@ -586,9 +586,9 @@
 						/
 						<a href="about.html"> About us </a>
 						/
-						<a href="accounts-comparison.html"> Sign up </a>
+						<a href="{% url 'signup' %}"> Sign up </a>
 						/
-						<a href="sign-in.html"> Login </a>
+						<a href="{% url 'login' %}"> Login </a>
 						/
 						<a href="faq.html"> FAQs </a>
 						/
@@ -648,19 +648,19 @@
 			<div class="p-20"></div>
 		</footer>
 
-		<script src="js/jquery-ui.js"></script>
-		<script src="js/popper.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-		<script type="text/javascript" src="slick/slick.min.js"></script>
-		<script type="text/javascript" src="js/custom_slick.js"></script>
-		<script type="text/javascript" src="js/range-custom.js"></script>
-		<script type="text/javascript" src="js/counter.js"></script>
+		<script src="{% static 'js/jquery-ui.js' %}"></script>
+		<script src="{% static 'js/popper.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/custom_slick.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/range-custom.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/counter.js' %}"></script>
 		<div class="last-widget">
 			<div class="tradingview-widget-container">
 				<div class="tradingview-widget-container__widget"></div>
 				<script type="text/javascript"
-					src="../s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+					src="{% static 'js/embed-widget-ticker-tape.js' %}" async>
 						{
 							"colorTheme": "dark",
 								"isTransparent": false,
@@ -688,7 +688,7 @@
 		<script type="text/javascript">
   // var Comm100API=Comm100API||{};(function(t){function e(e){var a=document.createElement("script"),c=document.getElementsByTagName("script")[0];a.type="text/javascript",a.async=!0,a.src=e+t.site_id,c.parentNode.insertBefore(a,c)}t.chat_buttons=t.chat_buttons||[],t.chat_buttons.push({code_plan:"0422747e-66ce-480e-bf06-fdd46ed90f5e",div_id:"comm100-button-0422747e-66ce-480e-bf06-fdd46ed90f5e"}),t.site_id=40100121,t.main_code_plan="0422747e-66ce-480e-bf06-fdd46ed90f5e",e("https://vue.comm100.com/livechat.ashx?siteId="),setTimeout(function(){t.loaded||e("https://standby.comm100vue.com/livechat.ashx?siteId=")},5e3)})(Comm100API||{})
 		</script>
-		<<!--Start of Tawk.to Script-->
+		<!--Start of Tawk.to Script-->
 			<!--Start of Tawk.to Script-->
 			<script type="text/javascript">
 				var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();

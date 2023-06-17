@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-
+{% load static %}
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
   <meta name="viewport"
     content="width=device-width, initial-scale=1, maximum-scale=1,shrink-to-fit=no, user-scalable=0" />
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/style_preloader.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style_preloader.css' %}">
   <link href="https://fonts.googleapis.com/css?family=Raleway&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <script src="js/jquery-ui.js"></script>
-  <script src="../kit.fontawesome.com/e44d5a293a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+  <script src="{% static 'js/jquery-ui.js' %}"></script>
+  <script src="{% static 'js/kit.js' %}" crossorigin="anonymous"></script>
   <title>LionFx | Crypto</title>
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'js/sweetalert.min.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}" />
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link href="http://db.onlinewebfonts.com/c/15a9075ddf4ff1158eb03abbc873a3a4?family=Frank-Light" rel="stylesheet"
     type="text/css" />
-  <script src="js/jquery.cycle.all.js"></script>
+  <script src="{% stati 'js/jquery.cycle.all.js' %}"></script>
   <script type="text/javascript">
     $(window).on('load', function () {
       $('.preloader').addClass('complete');
     });
   </script>
-  <link href="images/favicon.png" rel="icon" type="image/x-icon">
+  <link href="{% stati 'images/favicon.png' %}" rel="icon" type="image/x-icon">
 </head>
 
 <body>
@@ -41,10 +41,10 @@
           <div class="row">
             <div class="col-md-3 col-sm-12">
               <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" class="brand" /></a>
+                <img src="{% static 'images/logo.png' %}" class="brand" /></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="images/icon/hamburger-blk.png" />
+                <img src="{% static 'images/icon/hamburger-blk.png' %}" />
               </button>
             </div>
             <!-- Navbar section -->
@@ -81,13 +81,13 @@
                       </div>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="about.html">ABOUT US</a>
+                      <a class="nav-link" href="#">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="faq.html">FAQS</a>
+                      <a class="nav-link" href="#">FAQS</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="contact.html">CONTACTS</a>
+                      <a class="nav-link" href="#">CONTACTS</a>
                     </li>
 
                   </ul>
@@ -128,7 +128,7 @@
               <div class="container">
                 <br />
                 <h2 class="text-right t-h2"> Cryptocurrencies</h2>
-                <img src="images/crypto.jpg" style="padding: 20px;">
+                <img src="{% static 'images/crypto.jpg' %}" style="padding: 20px;">
                 <div style="padding: 20px;">
                   <h3> What is a Cryptocurrency?</h3>
                   <p class="t-p">Cryptocurrencies (Crypto) are virtual currencies that typically use a decentralised
@@ -290,18 +290,18 @@
 
 
 
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="slick/slick.min.js"></script>
-        <script type="text/javascript" src="js/custom_slick.js"></script>
-        <script type="text/javascript" src="js/range-custom.js"></script>
-        <script type="text/javascript" src="js/counter.js"></script>
+        <script src="{% static 'js/jquery-ui.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'slick/slick.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/custom_slick.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/range-custom.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/counter.js' %}"></script>
         <div class="last-widget">
           <div class="tradingview-widget-container">
             <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript" src="../s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+            <script type="text/javascript" src="{% static 'js/embed-widget-ticker-tape.js' %}"
               async>
                 {
                   "colorTheme": "dark",
@@ -345,7 +345,7 @@
           </script>
           <!--End of Tawk.to Script-->
 
-          <script src="js/aos.js"></script>
+          <script src="{% static 'js/aos.js' %}"></script>
           <script>
             let scrollRef = 0;
             window.addEventListener('scroll', function () {
