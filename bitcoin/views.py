@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth import authenticate, login
 from django.views import View
+from coinbase_commerce.client import Client
+from django.conf import settings 
 
 User = get_user_model()
 
@@ -66,4 +68,54 @@ class CustomLoginView(View):
 
 @csrf_protect
 def home(request):
-    return render(request, "index.html")
+    client = Client(api_key=settings.COINBASE_COMMERCE_API_KEY)
+    domain_url = 'http://localhost:8000/'
+    product = {
+        'name': 'STARTER',
+        'local_price': {
+            'amount': '70.00',
+            'currency': 'USD'
+        },
+        'pricing_type': 'fixed_price',
+        'redirect_url': domain_url + 'success/',
+        'cancel_url': domain_url + 'cancel/',
+    }
+
+    product2 = {
+        'name': 'SILVER',
+        'local_price': {
+            'amount': '200.00',
+            'currency': 'USD'
+        },
+        'pricing_type': 'fixed_price',
+        'redirect_url': domain_url + 'success/',
+        'cancel_url': domain_url + 'cancel/',
+    }
+
+    product3 = {
+        'name': 'GOLD',
+        'local_price': {
+            'amount': '500.00',
+            'currency': 'USD'
+        },
+        'pricing_type': 'fixed_price',
+        'redirect_url': domain_url + 'success/',
+        'cancel_url': domain_url + 'cancel/',
+    }
+
+    product4 = {
+        'name': 'PLATINUM',
+        'local_price': {
+            'amount': '12000.00',
+            'currency': 'USD'
+        },
+        'pricing_type': 'fixed_price',
+        'redirect_url': domain_url + 'success/',
+        'cancel_url': domain_url + 'cancel/',
+    }
+    charge = client.charge.create(**product)
+    charge2 = client.charge.create(**product2)
+    charge3 = client.charge.create(**product3)
+    charge4 = client.charge.create(**product4)
+
+    return render(request, "index.html", {'charge': charge, 'charge2': charge2, 'charge3': charge3, 'charge4': charge4})

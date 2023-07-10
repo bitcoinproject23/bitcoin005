@@ -124,3 +124,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+
+COINBASE_COMMERCE_API_KEY = "42d697f2-4f5d-4c00-b98f-6cc16eac85dd"
